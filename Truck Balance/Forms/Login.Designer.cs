@@ -46,7 +46,7 @@
             this.button1.Location = new System.Drawing.Point(115, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -58,7 +58,7 @@
             this.button2.Location = new System.Drawing.Point(196, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -69,7 +69,7 @@
             this.cbUser.Location = new System.Drawing.Point(133, 139);
             this.cbUser.Name = "cbUser";
             this.cbUser.Size = new System.Drawing.Size(121, 21);
-            this.cbUser.TabIndex = 1;
+            this.cbUser.TabIndex = 0;
             // 
             // txtPass
             // 
@@ -77,7 +77,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(121, 20);
-            this.txtPass.TabIndex = 2;
+            this.txtPass.TabIndex = 1;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -111,6 +111,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 269);
