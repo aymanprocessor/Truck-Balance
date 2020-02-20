@@ -54,16 +54,130 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\prevWieght.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\prevWieght.Designer.cs">
+      <DependentUpon>prevWieght.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\trucks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\trucks.Designer.cs">
+      <DependentUpon>trucks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\customers.Designer.cs">
+      <DependentUpon>customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\goods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\goods.Designer.cs">
+      <DependentUpon>goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\citys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\citys.Designer.cs">
+      <DependentUpon>citys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\drivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\drivers.Designer.cs">
+      <DependentUpon>drivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\first_weight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\first_weight.Designer.cs">
+      <DependentUpon>first_weight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\second_weight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\second_weight.Designer.cs">
+      <DependentUpon>second_weight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\prevWieght.resx">
+      <DependentUpon>prevWieght.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\trucks.resx">
+      <DependentUpon>trucks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\customers.resx">
+      <DependentUpon>customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\goods.resx">
+      <DependentUpon>goods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\citys.resx">
+      <DependentUpon>citys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\drivers.resx">
+      <DependentUpon>drivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\first_weight.resx">
+      <DependentUpon>first_weight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\second_weight.resx">
+      <DependentUpon>second_weight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,7 +187,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dbDataSet.xsc">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDataSet.xss">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
