@@ -83,7 +83,7 @@ namespace Truck_Balance.Forms
                     }
                     else
                     {
-                        label12.Text = (Convert.ToInt16(command.ExecuteScalar()) + 1).ToString();
+                        label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
                     }
                 }
             }
@@ -120,7 +120,7 @@ namespace Truck_Balance.Forms
             serial.Disconnect();
             second_weight second_Weight = new second_weight();
             second_Weight.Show();
-            second_Weight.loadDataById(Convert.ToInt16(label12.Text));
+            second_Weight.loadDataById(Convert.ToInt32(label12.Text));
             this.Hide();
         }
 
@@ -205,7 +205,7 @@ namespace Truck_Balance.Forms
 
         private void record1()
         {
-            if (Convert.ToInt16(lblWeightReading.Text) > 0)
+            if (Convert.ToInt64(lblWeightReading.Text) > 0)
             {
                 lblCarWeight1.Text = lblWeightReading.Text.TrimStart(new char[] { '0' });
             }
@@ -284,7 +284,7 @@ namespace Truck_Balance.Forms
                         }
                         else
                         {
-                            label12.Text = (Convert.ToInt16(command.ExecuteScalar()) + 1).ToString();
+                            label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
                         }
                     }
                 }
@@ -433,7 +433,7 @@ namespace Truck_Balance.Forms
                     {
                         conn.Open();
 
-                        count = Convert.ToInt16(cmd.ExecuteScalar());
+                        count = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
                 if (count > 0)
@@ -452,7 +452,7 @@ namespace Truck_Balance.Forms
                 "firstTime=@firstTime," +
                 "note = @note " +
                 "[user] = @user " +
-                "WHERE id = {0}", Convert.ToInt16(label12.Text));
+                "WHERE id = {0}", Convert.ToInt32(label12.Text));
                     int get_custId;
                     string sql1 = string.Format("select id from Customers where name=N'{0}'", cbCustomerName.Text);
                     using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
@@ -537,7 +537,7 @@ namespace Truck_Balance.Forms
                         {
                             conn.Open();
 
-                            get_custId = Convert.ToInt16(cmd.ExecuteScalar());
+                            get_custId = Convert.ToInt32(cmd.ExecuteScalar());
                         }
                     }
                     using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))

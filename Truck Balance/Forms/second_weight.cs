@@ -69,7 +69,7 @@ namespace Truck_Balance.Forms
                     }
                     else
                     {
-                        lblCode.Text = (Convert.ToInt16(command.ExecuteScalar())).ToString();
+                        lblCode.Text = (Convert.ToInt32(command.ExecuteScalar())).ToString();
                     }
                 }
             }
@@ -156,7 +156,7 @@ namespace Truck_Balance.Forms
 
         private void record2()
         {
-            if (Convert.ToInt32(lblWeightReading.Text) > 0)
+            if (Convert.ToInt64(lblWeightReading.Text) > 0)
             {
                 lblCarWeight.Text = lblWeightReading.Text.TrimStart(new char[] { '0' });
             }
@@ -175,7 +175,7 @@ namespace Truck_Balance.Forms
         {
             try
             {
-                string sql2 = string.Format("select count(*) from Wieghts where id={0}", Convert.ToInt16(lblCode.Text));
+                string sql2 = string.Format("select count(*) from Wieghts where id={0}", Convert.ToInt32(lblCode.Text));
                 int count;
                 using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
@@ -183,7 +183,7 @@ namespace Truck_Balance.Forms
                     {
                         conn.Open();
 
-                        count = Convert.ToInt16(cmd.ExecuteScalar());
+                        count = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
                 //if (count > 0)
@@ -212,7 +212,7 @@ namespace Truck_Balance.Forms
                     {
                         conn.Open();
 
-                        get_custId = Convert.ToInt16(cmd.ExecuteScalar());
+                        get_custId = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
                 using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
@@ -327,8 +327,8 @@ namespace Truck_Balance.Forms
 
         private string finalWieght()
         {
-            int wieght1 = !lblCarWieght2.Text.Equals("") ? Convert.ToInt32(lblCarWieght2.Text.All(char.IsDigit) ? lblCarWieght2.Text : "0") : 0;
-            int wieght2 = !lblCarWeight.Text.Equals("") ? Convert.ToInt32(lblCarWeight.Text.All(char.IsDigit) ? lblCarWeight.Text : "0") : 0;
+            long wieght1 = !lblCarWieght2.Text.Equals("") ? Convert.ToInt64(lblCarWieght2.Text.All(char.IsDigit) ? lblCarWieght2.Text : "0") : 0;
+            long wieght2 = !lblCarWeight.Text.Equals("") ? Convert.ToInt64(lblCarWeight.Text.All(char.IsDigit) ? lblCarWeight.Text : "0") : 0;
             if (wieght1 > 0 && wieght2 > 0)
             {
                 if (wieght1 < wieght2)
@@ -413,7 +413,7 @@ namespace Truck_Balance.Forms
             reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
             LocalReport localReport = new LocalReport();
             localReport.ReportPath = Application.StartupPath + "\\Report1.rdlc";
-            Data_Access data_Access = new Data_Access(Convert.ToInt16(lblCode.Text));
+            Data_Access data_Access = new Data_Access(Convert.ToInt32(lblCode.Text));
             ReportDataSource rds = new ReportDataSource("Wieghts", data_Access.getReportData());
             localReport.DataSources.Clear();
             localReport.DataSources.Add(rds);
@@ -448,7 +448,7 @@ namespace Truck_Balance.Forms
             ReportParameterCollection reportParameter = new ReportParameterCollection();
             reportParameter.Add(new ReportParameter("toArabic", word.ConvertToArabic()));
             reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
-            Report report = new Report(Convert.ToInt16(lblCode.Text), reportParameter);
+            Report report = new Report(Convert.ToInt32(lblCode.Text), reportParameter);
             report.Show();
             Hide();
         }

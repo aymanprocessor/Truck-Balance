@@ -58,10 +58,10 @@
             this.button2.BackColor = System.Drawing.Color.Maroon;
             this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(194, 433);
+            this.button2.Location = new System.Drawing.Point(216, 433);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 58);
+            this.button2.Size = new System.Drawing.Size(200, 58);
             this.button2.TabIndex = 3;
             this.button2.Text = "خروج  من البرنامج";
             this.button2.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@
             this.txtPass.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(232, 30);
+            this.txtPass.Size = new System.Drawing.Size(232, 31);
             this.txtPass.TabIndex = 1;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -97,7 +97,7 @@
             this.label1.Location = new System.Drawing.Point(466, 305);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.Size = new System.Drawing.Size(121, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = ": المستخدم";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -109,7 +109,7 @@
             this.label2.Location = new System.Drawing.Point(466, 369);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 23);
+            this.label2.Size = new System.Drawing.Size(130, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = ": كلمة المرور";
             this.label2.Click += new System.EventHandler(this.label2_Click);
