@@ -1,43 +1,34 @@
-﻿using MetroFramework.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 using Truck_Balance.Forms;
 
 namespace Truck_Balance
 {
-    public partial class Main : MetroForm
+    public partial class Main : Form
     {
         public Main()
         {
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-    
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
-            
+            Login login = new Login();
+            login.Show();
+            Hide();
         }
 
         private void metroTile11_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.port == "")
+            {
+                MessageBox.Show("من فضلك اختر Com Port", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             first_weight first_Weight = new first_weight();
             first_Weight.Show();
             this.Hide();
@@ -45,16 +36,18 @@ namespace Truck_Balance
 
         private void metroTile12_Click(object sender, EventArgs e)
         {
-           //prevWieght second_Weight = new prevWieght(this);
-           // second_Weight.Show();
+            second_weight second_Weight = new second_weight();
+            second_Weight.Show();
+            prevWieght prevwieght = new prevWieght(second_Weight);
+            prevwieght.Show();
 
+            this.Hide();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
             drivers d = new drivers();
             d.Show();
-           
         }
 
         private void metroTile8_Click(object sender, EventArgs e)
@@ -83,26 +76,57 @@ namespace Truck_Balance
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
         }
 
         private void metroTile9_Click(object sender, EventArgs e)
         {
             Review r = new Review();
             r.Show();
+            Hide();
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
             Setting setting = new Setting();
             setting.Show();
-            
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
             Users users = new Users();
             users.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.username == "admin")
+            {
+                metroTile1.Enabled = true;
+                metroTile2.Enabled = true;
+            }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToString("hh:mm:ss tt  \t dd-MM-yyyy");
+        }
+
+        private void metroTile11_Click_1(object sender, EventArgs e)
+        {
+            passwordChanger changer = new passwordChanger();
+            changer.Show();
+        }
+
+        private void metroTile10_Click(object sender, EventArgs e)
+        {
+            prompt_reportByDatecs prompt = new prompt_reportByDatecs();
+            prompt.Show();
+            Hide();
         }
     }
 }

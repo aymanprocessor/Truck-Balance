@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +15,7 @@ namespace Truck_Balance.Forms
 {
     public partial class Setting : Form
     {
+        SerialPortReader sp;
         public Setting()
         {
             InitializeComponent();
@@ -25,6 +28,7 @@ namespace Truck_Balance.Forms
 
         private void Setting_Load(object sender, EventArgs e)
         {
+            sp = new SerialPortReader(this, label5);
             loadPort();
             loadPortSetting();
         }
@@ -56,6 +60,10 @@ namespace Truck_Balance.Forms
             cbParity.Text = Properties.Settings.Default.parity;
             cbDatabits.Text = Properties.Settings.Default.databits;
             cbStopbits.Text = Properties.Settings.Default.stopbits;
+            txtDbConn.Text = Properties.Settings.Default.dbpath;
+            txtStart.Text = Properties.Settings.Default.start;
+            txtEnd.Text = Properties.Settings.Default.end;
+
         }
 
         private void savePortSetting(string port, string baudrate, string parity, string databits, string stopbits)
@@ -65,6 +73,8 @@ namespace Truck_Balance.Forms
             Properties.Settings.Default.parity = parity;
             Properties.Settings.Default.databits = databits;
             Properties.Settings.Default.stopbits = stopbits;
+            Properties.Settings.Default.start = txtStart.Text;
+            Properties.Settings.Default.end = txtEnd.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -77,6 +87,73 @@ namespace Truck_Balance.Forms
         {
             savePortSetting(cbPort.Text, "9600", "None", "8", "1");
             loadPortSetting();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                sp.Connect();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+      
+       
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+
+                sp.Disconnect();
+              
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.dbpath = txtDbConn.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txtDbConn.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            sp.Disconnect();
+           
+            Hide();
+
+        }
+
+        private void Setting_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sp.Disconnect();
+          
+            Hide();
         }
     }
 }

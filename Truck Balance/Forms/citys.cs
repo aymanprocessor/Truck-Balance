@@ -14,7 +14,7 @@ namespace Truck_Balance.Forms
 {
     public partial class citys : Form
     {
-        string fileName = String.Format("data\\citys.txt", Environment.CurrentDirectory);
+        string fileName = String.Format("data\\product.txt", Environment.CurrentDirectory);
         public citys()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Truck_Balance.Forms
         private void drivers_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbDataSet.driver' table. You can move, or remove it, as needed.
-            this.driverTableAdapter.Fill(this.dbDataSet.driver);
+         
 
 
             Directory.CreateDirectory(Environment.CurrentDirectory + "\\data");
@@ -59,7 +59,7 @@ namespace Truck_Balance.Forms
             }
             else
             {
-                MessageBox.Show("من فضلك اكتب المدينة");
+                MessageBox.Show("من فضلك اكتب الصنف");
             }
 
 
@@ -80,6 +80,11 @@ namespace Truck_Balance.Forms
                 MessageBox.Show("من فضلك اختر المدينة");
             }
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

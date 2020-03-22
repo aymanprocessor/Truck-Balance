@@ -23,16 +23,6 @@ namespace Truck_Balance.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=db;Integrated Security=True")]
-        public string dbConnectionString {
-            get {
-                return ((string)(this["dbConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -102,6 +92,65 @@ namespace Truck_Balance.Properties {
             }
             set {
                 this["username"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public string start {
+            get {
+                return ((string)(this["start"]));
+            }
+            set {
+                this["start"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public string end {
+            get {
+                return ((string)(this["end"]));
+            }
+            set {
+                this["end"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\Mohamed Saad Eldin\\Desktop\\Truck Balance\\Truck Balance\\data" +
+            "base.sdf\"")]
+        public string dbConnectionString {
+            get {
+                return ((string)(this["dbConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("database.sdf")]
+        public string dbpath {
+            get {
+                return ((string)(this["dbpath"]));
+            }
+            set {
+                this["dbpath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool firstTime {
+            get {
+                return ((bool)(this["firstTime"]));
+            }
+            set {
+                this["firstTime"] = value;
             }
         }
     }

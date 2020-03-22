@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Truck_Balance.Forms
 {
     public partial class Users : Form
     {
+        common com;
         public Users()
         {
             InitializeComponent();
@@ -34,9 +36,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = "insert into Users(username , password)VALUES(@username,@password)";
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@username", txtUser.Text);
@@ -59,12 +61,12 @@ namespace Truck_Balance.Forms
         {
             try
             {
-                string sql = "select id as م , username as 'اسم المستخدم' ,password as 'كلمة السر' from users";
+                string sql = "select id , username as Username ,password as Password from Users";
                 
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
                     conn.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
+                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
                     {
                       
                         DataSet dt = new DataSet();
@@ -82,6 +84,7 @@ namespace Truck_Balance.Forms
 
         private void Users_Load(object sender, EventArgs e)
         {
+            com = new common();
             loadUsers();
         }
 
@@ -95,9 +98,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = string.Format("delete from users where id = {0}",Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value));
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
                     {
 
                         conn.Open();
@@ -135,6 +138,11 @@ namespace Truck_Balance.Forms
             txtUser.Clear();
             txtPass.Clear();
             txtConfirm.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

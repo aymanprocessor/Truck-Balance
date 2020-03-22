@@ -7,17 +7,24 @@ using Truck_Balance.Forms;
 
 namespace Truck_Balance
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            if (Properties.Settings.Default.firstTime)
+            {
+                Application.Run(new Initial());
+            }
+            else
+            {
+                Application.Run(new Main());
+            }
         }
     }
 }

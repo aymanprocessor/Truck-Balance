@@ -14,7 +14,7 @@ namespace Truck_Balance.Forms
 {
     public partial class drivers : Form
     {
-        string fileName = String.Format("data\\drivers.txt", Environment.CurrentDirectory);
+        string fileName = String.Format("{0}\\data\\drivers.txt", Environment.CurrentDirectory);
         public drivers()
         {
             InitializeComponent();
@@ -80,6 +80,11 @@ namespace Truck_Balance.Forms
                 MessageBox.Show("من فضلك اختر الاسم");
             }
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

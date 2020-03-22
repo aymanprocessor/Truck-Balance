@@ -10,35 +10,30 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections;
 using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 
 namespace Truck_Balance.Forms
 {
     public partial class customers : Form
     {
         //string fileName = String.Format("data\\customers.txt", Environment.CurrentDirectory);
+        common com;
         public customers()
         {
             InitializeComponent();
         }
 
-        private void drivers_Load(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             if (validate())
             {
-                string sql = "insert into dbo.Customers(name,address,government) VALUES(@name,@address,@government)";
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+                string sql = "insert into Customers(name,address,government) VALUES(@name,@address,@government)";
+                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@name", tbName.Text);
                         cmd.Parameters.AddWithValue("@address", tbAddress.Text);
@@ -66,10 +61,10 @@ namespace Truck_Balance.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             int selectedRow = Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value);
-            string sql = string.Format("delete from dbo.Customers where id={0}",selectedRow);
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+            string sql = string.Format("delete from Customers where id={0}",selectedRow);
+            using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
             {
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
                 {
                     try
                     {
@@ -100,6 +95,8 @@ namespace Truck_Balance.Forms
 
         private void customers_Load(object sender, EventArgs e)
         {
+
+            com = new common();
             string[] government = {
                     "الإسماعيلية",
                     "أسوان",
@@ -128,7 +125,7 @@ namespace Truck_Balance.Forms
                     "المنيا",
                     "الوادي الجديد"
             };
-            foreach (string i in government)
+            foreach (string i in government.ToList())
             {
                 cbGovernment.Items.Add(i);
 
@@ -138,22 +135,30 @@ namespace Truck_Balance.Forms
 
         void load()
         {
-
-            string sql = "select id as م ,name as الاسم , address as العنوان , government as المحافظة from dbo.Customers";
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+            try
             {
-                using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
+                string sql = "select id as م ,name as الاسم , address as العنوان , government as المحافظة from Customers";
+                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
                 {
-                    conn.Open();
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
+                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    {
+                        conn.Open();
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                    dataGridView1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
 
 
 
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+           
         }
 
         bool validate()
@@ -171,6 +176,11 @@ namespace Truck_Balance.Forms
             }
 
             return true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }
