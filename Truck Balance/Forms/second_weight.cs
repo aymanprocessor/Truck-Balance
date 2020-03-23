@@ -152,6 +152,8 @@ namespace Truck_Balance.Forms
         {
             record2();
             finalWieght();
+            btnRecordWeight.BackColor = Color.Lime;
+            btnRecordWeight.ForeColor = Color.DarkGreen;
         }
 
         private void record2()
@@ -455,6 +457,16 @@ namespace Truck_Balance.Forms
 
         private void btnSave_as_fw_Click(object sender, EventArgs e)
         {
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

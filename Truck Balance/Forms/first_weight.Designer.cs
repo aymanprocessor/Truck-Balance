@@ -53,13 +53,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnRecordWeight = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lblTime1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblCarWeight1 = new System.Windows.Forms.Label();
             this.lblDate1 = new System.Windows.Forms.Label();
+            this.btnRecordWeight = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btnNewWeight = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblWeightReading = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -296,7 +296,7 @@
             this.groupBox1.Controls.Add(this.cbDriverName);
             this.groupBox1.Controls.Add(this.cbCarType);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.groupBox1.Location = new System.Drawing.Point(213, 125);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.groupBox1.Name = "groupBox1";
@@ -388,13 +388,13 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Lime;
             this.label12.Location = new System.Drawing.Point(-2, 5);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(149, 63);
+            this.label12.Size = new System.Drawing.Size(104, 63);
             this.label12.TabIndex = 0;
             this.label12.Text = "000";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,13 +403,13 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(143, 5);
+            this.label10.Location = new System.Drawing.Point(100, 5);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(293, 63);
+            this.label10.Size = new System.Drawing.Size(336, 63);
             this.label10.TabIndex = 0;
             this.label10.Text = "رقم التذكرة :";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -438,17 +438,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "بيانات الوزن";
             // 
-            // btnRecordWeight
+            // textBox1
             // 
-            this.btnRecordWeight.BackColor = System.Drawing.Color.Gray;
-            this.btnRecordWeight.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecordWeight.Location = new System.Drawing.Point(381, 75);
-            this.btnRecordWeight.Name = "btnRecordWeight";
-            this.btnRecordWeight.Size = new System.Drawing.Size(187, 42);
-            this.btnRecordWeight.TabIndex = 1;
-            this.btnRecordWeight.Text = "تسجيل الوزنة الاولى";
-            this.btnRecordWeight.UseVisualStyleBackColor = false;
-            this.btnRecordWeight.Click += new System.EventHandler(this.btnRecordWeight1_Click);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Purple;
+            this.textBox1.Location = new System.Drawing.Point(32, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(40, 25);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "كجم";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -539,6 +540,18 @@
             this.lblDate1.TabIndex = 0;
             this.lblDate1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDate1.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // btnRecordWeight
+            // 
+            this.btnRecordWeight.BackColor = System.Drawing.Color.Silver;
+            this.btnRecordWeight.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordWeight.Location = new System.Drawing.Point(381, 75);
+            this.btnRecordWeight.Name = "btnRecordWeight";
+            this.btnRecordWeight.Size = new System.Drawing.Size(187, 42);
+            this.btnRecordWeight.TabIndex = 1;
+            this.btnRecordWeight.Text = "تسجيل الوزنة الاولى";
+            this.btnRecordWeight.UseVisualStyleBackColor = false;
+            this.btnRecordWeight.Click += new System.EventHandler(this.btnRecordWeight1_Click);
             // 
             // label9
             // 
@@ -659,7 +672,7 @@
             this.lblWeightReading.Name = "lblWeightReading";
             this.lblWeightReading.Size = new System.Drawing.Size(314, 63);
             this.lblWeightReading.TabIndex = 18;
-            this.lblWeightReading.Text = "000000";
+            this.lblWeightReading.Text = "00000";
             this.lblWeightReading.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblWeightReading.TextChanged += new System.EventHandler(this.lblWeightReading_TextChanged);
             // 
@@ -675,19 +688,6 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "الوزنة الاولى";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Purple;
-            this.textBox1.Location = new System.Drawing.Point(32, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "كجم";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // first_weight
             // 

@@ -201,6 +201,8 @@ namespace Truck_Balance.Forms
         private void btnRecordWeight1_Click(object sender, EventArgs e)
         {
             record1();
+            btnRecordWeight.BackColor = Color.Lime;
+            btnRecordWeight.ForeColor = Color.DarkGreen;
         }
 
         private void record1()
