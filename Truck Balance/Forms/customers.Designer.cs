@@ -60,7 +60,7 @@
             this.tbName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(468, 38);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(163, 29);
+            this.tbName.Size = new System.Drawing.Size(163, 30);
             this.tbName.TabIndex = 4;
             // 
             // button2
@@ -98,7 +98,7 @@
             this.tbAddress.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.Location = new System.Drawing.Point(21, 38);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(184, 29);
+            this.tbAddress.Size = new System.Drawing.Size(184, 30);
             this.tbAddress.TabIndex = 4;
             // 
             // label1
@@ -109,7 +109,7 @@
             this.label1.Location = new System.Drawing.Point(641, 38);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(42, 22);
+            this.label1.Size = new System.Drawing.Size(43, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "الاسم";
             // 
@@ -121,7 +121,7 @@
             this.label2.Location = new System.Drawing.Point(211, 38);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(53, 22);
+            this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "العنوان";
             // 
@@ -133,7 +133,7 @@
             this.label3.Location = new System.Drawing.Point(398, 38);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(66, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "المحافظة";
             // 
@@ -158,7 +158,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 33);
             this.button3.TabIndex = 1;
-            this.button3.Text = "حروج";
+            this.button3.Text = "عودة";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

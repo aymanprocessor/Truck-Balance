@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Truck_Balance.Forms;
 
@@ -20,18 +21,6 @@ namespace Truck_Balance
             Login login = new Login();
             login.Show();
             Hide();
-        }
-
-        private void metroTile11_Click(object sender, EventArgs e)
-        {
-            if (Properties.Settings.Default.port == "")
-            {
-                MessageBox.Show("من فضلك اختر Com Port", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            first_weight first_Weight = new first_weight();
-            first_Weight.Show();
-            this.Hide();
         }
 
         private void metroTile12_Click(object sender, EventArgs e)
@@ -127,6 +116,33 @@ namespace Truck_Balance
             prompt_reportByDatecs prompt = new prompt_reportByDatecs();
             prompt.Show();
             Hide();
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.LightGreen;
+        }
+
+        private void metroTile11_Click(object sender, EventArgs e)
+        {
+            first_weight first_weight = new first_weight();
+            first_weight.Show();
+            Hide();
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.LightGreen;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Honeydew;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Honeydew;
         }
     }
 }

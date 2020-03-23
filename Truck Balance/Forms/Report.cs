@@ -44,8 +44,8 @@ namespace Truck_Balance.Forms
             reportViewer1.LocalReport.DataSources.Add(rds);
             ReportParameterCollection reportParameter = new ReportParameterCollection();
             reportParameter.Add(new ReportParameter("type", type));
-            reportParameter.Add(new ReportParameter("fromDate", fromDate.Value.ToString("dd/MM/yyyy")));
-            reportParameter.Add(new ReportParameter("toDate", toDate.Value.ToString("dd/MM/yyyy")));
+            reportParameter.Add(new ReportParameter("fromDate", fromDate.Value.ToString("yyyy/MM/dd")));
+            reportParameter.Add(new ReportParameter("toDate", toDate.Value.ToString("yyyy/MM/dd")));
             if (type.Equals("الصادرة"))
             {
                 this.reportViewer1.LocalReport.ReportPath = "Reports\\Rep_alum.rdlc";

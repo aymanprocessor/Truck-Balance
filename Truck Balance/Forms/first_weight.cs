@@ -450,7 +450,7 @@ namespace Truck_Balance.Forms
                 "containerNumber=@containerNumber," +
                 "firstWieght=@firstWieght," +
                 "firstTime=@firstTime," +
-                "note = @note " +
+                "note = @note, " +
                 "[user] = @user " +
                 "WHERE id = {0}", Convert.ToInt32(label12.Text));
                     int get_custId;
@@ -479,7 +479,6 @@ namespace Truck_Balance.Forms
                             cmd.Parameters.AddWithValue("@containerNumber", tbGoodNumber.Text.Trim());
                             cmd.Parameters.AddWithValue("@firstWieght", lblCarWeight1.Text.Trim());
                             cmd.Parameters.AddWithValue("@firstTime", DateTime.ParseExact(lblDate1.Text.Trim() + " " + lblTime1.Text.Trim(), "dd/MM/yyyy hh:mm tt", CultureInfo.InvariantCulture));
-
                             cmd.Parameters.AddWithValue("@note", tbNote.Text.Trim());
                             cmd.Parameters.AddWithValue("@user", Properties.Settings.Default.username.Trim());
 
@@ -509,9 +508,8 @@ namespace Truck_Balance.Forms
                 "truckNumber," +
                 "containerNumber," +
                 "firstWieght," +
-                 "firstTime," +
-                 "[user]," +
-
+                "firstTime," +
+                "[user]," +
                 "note) " +
                 "VALUES(@customerId," +
                 "@product," +

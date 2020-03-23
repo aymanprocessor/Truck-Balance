@@ -14,10 +14,12 @@ namespace Truck_Balance
             InitializeComponent();
             panel1.Visible = true;
             panel2.Visible = false;
+            panel3.Visible = false;
         }
 
         private void Initial_Load(object sender, EventArgs e)
         {
+            sp = new SerialPortReader(this, lblWeightReading);
             LoadPortSetting();
             loadPort();
         }
@@ -46,15 +48,23 @@ namespace Truck_Balance
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            ShowPanel1();
+            if (panel2.Visible == true)
+            {
+                ShowPanel1();
+            }
+            else if (panel3.Visible == true)
+            {
+                ShowPanel2();
+            }
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            sp = new SerialPortReader(this, lblWeightReading);
             sp.Connect();
             btnDisconnect.Enabled = true;
             btnConnect.Enabled = false;
+            btnNext.Enabled = false;
+            btnPrev.Enabled = false;
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
@@ -62,6 +72,8 @@ namespace Truck_Balance
             sp.Disconnect();
             btnDisconnect.Enabled = false;
             btnConnect.Enabled = true;
+            btnNext.Enabled = true;
+            btnPrev.Enabled = true;
         }
 
         private void ShowPanel1()
@@ -166,6 +178,7 @@ namespace Truck_Balance
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            sp.Disconnect();
             Application.ExitThread();
         }
 
@@ -177,6 +190,24 @@ namespace Truck_Balance
         private void txtEnd_TextChanged(object sender, EventArgs e)
         {
             savePositionSetting();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            loadPort1();
+        }
+
+        private void loadPort1()
+        {
+            string[] ports = SerialPort.GetPortNames();
+            if (cbPort.Items.Count > 0)
+            {
+                cbPort.Items.Clear();
+            }
+            foreach (string port in ports)
+            {
+                cbPort.Items.Add(port);
+            }
         }
     }
 }

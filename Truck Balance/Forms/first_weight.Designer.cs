@@ -82,7 +82,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(90, 24);
+            this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "اسم العميل :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,7 +96,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(95, 24);
+            this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "اسم السائق :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,7 +111,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(101, 24);
+            this.label3.Size = new System.Drawing.Size(105, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "نوع السيارة :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +166,7 @@
             this.rbExport.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.rbExport.Name = "rbExport";
             this.rbExport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rbExport.Size = new System.Drawing.Size(64, 28);
+            this.rbExport.Size = new System.Drawing.Size(65, 28);
             this.rbExport.TabIndex = 4;
             this.rbExport.Text = "صادر";
             this.rbExport.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.rbImport.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.rbImport.Name = "rbImport";
             this.rbImport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rbImport.Size = new System.Drawing.Size(57, 28);
+            this.rbImport.Size = new System.Drawing.Size(58, 28);
             this.rbImport.TabIndex = 4;
             this.rbImport.Text = "وارد";
             this.rbImport.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(70, 24);
+            this.label6.Size = new System.Drawing.Size(74, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "ملاحظة :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,7 +210,7 @@
             this.tbNote.Location = new System.Drawing.Point(74, 97);
             this.tbNote.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tbNote.Name = "tbNote";
-            this.tbNote.Size = new System.Drawing.Size(219, 30);
+            this.tbNote.Size = new System.Drawing.Size(219, 31);
             this.tbNote.TabIndex = 5;
             this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -223,7 +223,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(98, 24);
+            this.label7.Size = new System.Drawing.Size(102, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "رقم السيارة :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +236,7 @@
             this.tbCarNumber.Location = new System.Drawing.Point(74, 18);
             this.tbCarNumber.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tbCarNumber.Name = "tbCarNumber";
-            this.tbCarNumber.Size = new System.Drawing.Size(219, 30);
+            this.tbCarNumber.Size = new System.Drawing.Size(219, 31);
             this.tbCarNumber.TabIndex = 5;
             this.tbCarNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -249,7 +249,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(109, 24);
+            this.label8.Size = new System.Drawing.Size(114, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "رقم المقطورة :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,7 +262,7 @@
             this.tbGoodNumber.Location = new System.Drawing.Point(74, 58);
             this.tbGoodNumber.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tbGoodNumber.Name = "tbGoodNumber";
-            this.tbGoodNumber.Size = new System.Drawing.Size(219, 30);
+            this.tbGoodNumber.Size = new System.Drawing.Size(219, 31);
             this.tbGoodNumber.TabIndex = 5;
             this.tbGoodNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -363,7 +363,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(103, 24);
+            this.label4.Size = new System.Drawing.Size(108, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "نوع الحمولة :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -392,7 +392,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(99, 24);
+            this.label10.Size = new System.Drawing.Size(106, 26);
             this.label10.TabIndex = 0;
             this.label10.Text = "رقم التذكرة :";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -442,7 +442,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label11.Size = new System.Drawing.Size(61, 24);
+            this.label11.Size = new System.Drawing.Size(62, 24);
             this.label11.TabIndex = 0;
             this.label11.Text = "الوزن :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,7 +457,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label16.Size = new System.Drawing.Size(67, 24);
+            this.label16.Size = new System.Drawing.Size(71, 24);
             this.label16.TabIndex = 0;
             this.label16.Text = "التاريخ :";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,7 +486,7 @@
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label15.Size = new System.Drawing.Size(60, 24);
+            this.label15.Size = new System.Drawing.Size(62, 24);
             this.label15.TabIndex = 0;
             this.label15.Text = "الوقت :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -529,7 +529,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(103, 24);
+            this.label9.Size = new System.Drawing.Size(110, 26);
             this.label9.TabIndex = 0;
             this.label9.Text = "قراءة الميزان";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,7 +640,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(360, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 43);
+            this.label5.Size = new System.Drawing.Size(174, 45);
             this.label5.TabIndex = 19;
             this.label5.Text = "الوزنة الاولى";
             // 

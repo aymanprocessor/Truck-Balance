@@ -116,19 +116,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.46058in</Width>
+                  <Width>0.34718in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.56853in</Width>
+                  <Width>1.46544in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.49804in</Width>
+                  <Width>1.27124in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.91378in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.91763in</Width>
+                  <Width>0.76945in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.91763in</Width>
@@ -138,6 +135,9 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.91763in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.72175in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1049,10 +1049,10 @@
             </TablixRowHierarchy>
             <LayoutDirection>RTL</LayoutDirection>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.25694in</Top>
-            <Left>0.11759in</Left>
+            <Top>0.13194in</Top>
+            <Left>0.46831in</Left>
             <Height>0.53093in</Height>
-            <Width>8.11145in</Width>
+            <Width>7.32795in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1067,7 +1067,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>21.62043cm</Width>
+      <Width>20.99197cm</Width>
       <Page>
         <PageHeader>
           <Height>3.20281cm</Height>
@@ -1116,7 +1116,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>من </Value>
+                      <Value>من : </Value>
                       <Style>
                         <FontSize>16pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1130,7 +1130,7 @@
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value>       الى </Value>
+                      <Value>       الى : </Value>
                       <Style>
                         <FontSize>16pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1186,7 +1186,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
-              <Left>6.3327in</Left>
+              <Top>0.125in</Top>
+              <Left>6.2077in</Left>
               <Height>0.34375in</Height>
               <Width>1.92928in</Width>
               <ZIndex>2</ZIndex>
@@ -1214,10 +1215,9 @@
         </PageHeader>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>0.254cm</LeftMargin>
-        <RightMargin>0.254cm</RightMargin>
-        <TopMargin>0.254cm</TopMargin>
-        <BottomMargin>0.254cm</BottomMargin>
+        <LeftMargin>0cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>
         <Style />
       </Page>

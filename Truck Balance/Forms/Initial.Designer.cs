@@ -47,7 +47,6 @@
             this.lblCom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.txtEnd = new System.Windows.Forms.TextBox();
@@ -55,10 +54,11 @@
             this.txtStart = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblWeightReading = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtDbConn = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -139,30 +139,32 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(292, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(282, 54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cbPort
             // 
             this.cbPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPort.FormattingEnabled = true;
-            this.cbPort.Location = new System.Drawing.Point(152, 51);
+            this.cbPort.Location = new System.Drawing.Point(160, 51);
             this.cbPort.Name = "cbPort";
-            this.cbPort.Size = new System.Drawing.Size(134, 33);
+            this.cbPort.Size = new System.Drawing.Size(112, 33);
             this.cbPort.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 14.84536F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(36, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 25);
+            this.label4.Size = new System.Drawing.Size(108, 24);
             this.label4.TabIndex = 10;
             this.label4.Text = "Stop bits :";
             // 
@@ -179,19 +181,19 @@
             "38400",
             "57600",
             "115200"});
-            this.cbBaudrate.Location = new System.Drawing.Point(152, 90);
+            this.cbBaudrate.Location = new System.Drawing.Point(160, 90);
             this.cbBaudrate.Name = "cbBaudrate";
-            this.cbBaudrate.Size = new System.Drawing.Size(152, 33);
+            this.cbBaudrate.Size = new System.Drawing.Size(112, 33);
             this.cbBaudrate.TabIndex = 6;
             this.cbBaudrate.Text = "9600";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 14.84536F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(36, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(107, 24);
             this.label3.TabIndex = 11;
             this.label3.Text = "Data bits :";
             // 
@@ -203,19 +205,19 @@
             "None",
             "Even",
             "Odd"});
-            this.cbParity.Location = new System.Drawing.Point(152, 129);
+            this.cbParity.Location = new System.Drawing.Point(160, 129);
             this.cbParity.Name = "cbParity";
-            this.cbParity.Size = new System.Drawing.Size(134, 33);
+            this.cbParity.Size = new System.Drawing.Size(112, 33);
             this.cbParity.TabIndex = 7;
             this.cbParity.Text = "None";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 14.84536F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(78, 24);
             this.label2.TabIndex = 12;
             this.label2.Text = "Parity :";
             // 
@@ -227,7 +229,7 @@
             "7",
             "8",
             "9"});
-            this.cbDatabits.Location = new System.Drawing.Point(152, 168);
+            this.cbDatabits.Location = new System.Drawing.Point(160, 168);
             this.cbDatabits.Name = "cbDatabits";
             this.cbDatabits.Size = new System.Drawing.Size(110, 33);
             this.cbDatabits.TabIndex = 8;
@@ -236,10 +238,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 14.84536F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(34, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 25);
+            this.label5.Size = new System.Drawing.Size(109, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "Baudrate :";
             // 
@@ -251,7 +253,7 @@
             "1",
             "2",
             "3"});
-            this.cbStopbits.Location = new System.Drawing.Point(152, 207);
+            this.cbStopbits.Location = new System.Drawing.Point(160, 207);
             this.cbStopbits.Name = "cbStopbits";
             this.cbStopbits.Size = new System.Drawing.Size(110, 33);
             this.cbStopbits.TabIndex = 9;
@@ -260,10 +262,10 @@
             // lblCom
             // 
             this.lblCom.AutoSize = true;
-            this.lblCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCom.Font = new System.Drawing.Font("Arial", 14.84536F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCom.Location = new System.Drawing.Point(82, 54);
             this.lblCom.Name = "lblCom";
-            this.lblCom.Size = new System.Drawing.Size(64, 25);
+            this.lblCom.Size = new System.Drawing.Size(63, 24);
             this.lblCom.TabIndex = 14;
             this.lblCom.Text = "Port :";
             // 
@@ -294,21 +296,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(699, 301);
             this.panel2.TabIndex = 17;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.txtDbConn);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.btnBrowse);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(12, 75);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 301);
-            this.panel3.TabIndex = 18;
             // 
             // btnDisconnect
             // 
@@ -349,7 +336,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(348, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 32);
+            this.label7.Size = new System.Drawing.Size(108, 33);
             this.label7.TabIndex = 5;
             this.label7.Text = "Length";
             // 
@@ -369,7 +356,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(160, 125);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 32);
+            this.label6.Size = new System.Drawing.Size(79, 33);
             this.label6.TabIndex = 6;
             this.label6.Text = "Start";
             // 
@@ -381,19 +368,24 @@
             this.lblWeightReading.ForeColor = System.Drawing.Color.Lime;
             this.lblWeightReading.Location = new System.Drawing.Point(272, 29);
             this.lblWeightReading.Name = "lblWeightReading";
-            this.lblWeightReading.Size = new System.Drawing.Size(154, 55);
+            this.lblWeightReading.Size = new System.Drawing.Size(159, 56);
             this.lblWeightReading.TabIndex = 4;
             this.lblWeightReading.Text = "00000";
             // 
-            // pictureBox3
+            // panel3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(278, 29);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(142, 119);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.txtDbConn);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.btnBrowse);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Location = new System.Drawing.Point(12, 75);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(699, 301);
+            this.panel3.TabIndex = 18;
             // 
             // txtDbConn
             // 
@@ -402,6 +394,16 @@
             this.txtDbConn.Name = "txtDbConn";
             this.txtDbConn.Size = new System.Drawing.Size(613, 30);
             this.txtDbConn.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(18, 201);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Database File Path";
             // 
             // btnBrowse
             // 
@@ -414,15 +416,15 @@
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // label8
+            // pictureBox3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 201);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Database File Path";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(278, 29);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(142, 119);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // openFileDialog1
             // 
@@ -433,12 +435,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

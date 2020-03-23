@@ -14,7 +14,8 @@ namespace Truck_Balance.Forms
 {
     public partial class trucks : Form
     {
-        string fileName = String.Format("data\\trucks.txt", Environment.CurrentDirectory);
+        private string fileName = String.Format("data\\trucks.txt", Environment.CurrentDirectory);
+
         public trucks()
         {
             InitializeComponent();
@@ -23,8 +24,6 @@ namespace Truck_Balance.Forms
         private void drivers_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbDataSet.driver' table. You can move, or remove it, as needed.
-         
-
 
             Directory.CreateDirectory(Environment.CurrentDirectory + "\\data");
             if (File.Exists(fileName))
@@ -38,21 +37,18 @@ namespace Truck_Balance.Forms
                     {
                         listBox1.Items.Add(line);
                     }
-
                 }
             }
             else
             {
-
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
-                File.AppendAllText(fileName, textBox1.Text+Environment.NewLine);
+                File.AppendAllText(fileName, textBox1.Text + Environment.NewLine);
                 listBox1.Items.Add(textBox1.Text);
                 textBox1.Clear();
                 textBox1.Focus();
@@ -61,9 +57,6 @@ namespace Truck_Balance.Forms
             {
                 MessageBox.Show("من فضلك اكتب الشاحنات");
             }
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,7 +72,11 @@ namespace Truck_Balance.Forms
             {
                 MessageBox.Show("من فضلك اختر الشاحنات");
             }
-            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

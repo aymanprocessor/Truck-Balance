@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace Truck_Balance
 {
-  
-    class SerialPortReader : IDisposable
+    internal class SerialPortReader : IDisposable
     {
-        SerialPort sp;
-        TextBox lblWeightReading;
-        Label lblWeightReading_label;
-        Form form;
-        public SerialPortReader(Form _form,Label _lblWeightReading)
+        private SerialPort sp;
+        private TextBox lblWeightReading;
+        private Label lblWeightReading_label;
+        private Form form;
+
+        public SerialPortReader(Form _form, Label _lblWeightReading)
         {
             sp = new SerialPort();
             lblWeightReading_label = _lblWeightReading;
@@ -62,15 +62,12 @@ namespace Truck_Balance
 
         private void DisplayData(object sender, EventArgs e)
         {
-
             lblWeightReading.Text = "";
             string data = (string)sender;
             if (data.Length > 7)
             {
                 lblWeightReading.Text = data.Substring(Convert.ToInt16(Properties.Settings.Default.start), Convert.ToInt16(Properties.Settings.Default.end));
             }
-
-
         }
 
         private void DataReceivedHandlerII(object sender, SerialDataReceivedEventArgs e)
@@ -93,26 +90,26 @@ namespace Truck_Balance
 
         private void DisplayDataII(object sender, EventArgs e)
         {
-
             lblWeightReading_label.Text = "";
             string data = (string)sender;
             if (data.Length > 7)
             {
                 lblWeightReading_label.Text = data.Substring(Convert.ToInt16(Properties.Settings.Default.start), Convert.ToInt16(Properties.Settings.Default.end));
             }
-
-
         }
+
         public void Connect()
         {
             try
             {
-                sp.Open();
+                if (!sp.IsOpen)
+                {
+                    sp.Open();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -120,12 +117,14 @@ namespace Truck_Balance
         {
             try
             {
-                sp.Close();
+                if (sp.IsOpen)
+                {
+                    sp.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 

@@ -65,7 +65,7 @@
             this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(127, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 29);
+            this.textBox1.Size = new System.Drawing.Size(346, 30);
             this.textBox1.TabIndex = 4;
             // 
             // button2
@@ -88,7 +88,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 33);
             this.button3.TabIndex = 1;
-            this.button3.Text = "خروج";
+            this.button3.Text = "عودة";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

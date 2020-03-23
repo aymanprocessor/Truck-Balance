@@ -38,7 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btnBack = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +81,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(350, 245);
+            this.button1.Location = new System.Drawing.Point(291, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 42);
             this.button1.TabIndex = 2;
@@ -93,11 +92,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(112, 245);
+            this.button2.Location = new System.Drawing.Point(172, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 42);
             this.button2.TabIndex = 2;
-            this.button2.Text = "خروج";
+            this.button2.Text = "عودة";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -129,13 +128,13 @@
             this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radioButton2.Size = new System.Drawing.Size(67, 28);
             this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "اخرى";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(174, 10);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -144,17 +143,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "قطاعات الومنيوم";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnBack.Location = new System.Drawing.Point(231, 245);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(113, 42);
-            this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "رجوع";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // textBox1
             // 
@@ -173,7 +161,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
@@ -204,7 +191,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
