@@ -564,7 +564,7 @@
             this.btnNewWeight.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnNewWeight.Image")));
             this.btnNewWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewWeight.Location = new System.Drawing.Point(19, 331);
+            this.btnNewWeight.Location = new System.Drawing.Point(19, 332);
             this.btnNewWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewWeight.Name = "btnNewWeight";
             this.btnNewWeight.Size = new System.Drawing.Size(154, 60);
