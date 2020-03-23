@@ -30,7 +30,7 @@ namespace Truck_Balance
             prevWieght prevwieght = new prevWieght(second_Weight);
             prevwieght.Show();
 
-            this.Hide();
+           // this.Hide();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace Truck_Balance
         {
             first_weight first_weight = new first_weight();
             first_weight.Show();
-            Hide();
+           // this.Hide();
         }
 
         private void button2_MouseHover(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace Truck_Balance
             }
             else
             {
-                Application.Run(new Login());
+                Application.Run(new first_weight());
             }
         }
     }

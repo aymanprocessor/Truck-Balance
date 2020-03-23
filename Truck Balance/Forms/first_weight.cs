@@ -667,5 +667,20 @@ namespace Truck_Balance.Forms
                 }
             }
         }
+
+        private void lblWeightReading_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCarNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
