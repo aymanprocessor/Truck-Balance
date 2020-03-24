@@ -106,7 +106,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.Location = new System.Drawing.Point(-1, 431);
+            this.btnPrint.Location = new System.Drawing.Point(11, 431);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(151, 60);
@@ -124,7 +124,7 @@
             this.btnSave.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(-1, 201);
+            this.btnSave.Location = new System.Drawing.Point(11, 201);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(151, 60);
@@ -277,7 +277,7 @@
             this.lblCarWieght2.BackColor = System.Drawing.Color.Transparent;
             this.lblCarWieght2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarWieght2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCarWieght2.Location = new System.Drawing.Point(470, 14);
+            this.lblCarWieght2.Location = new System.Drawing.Point(510, 14);
             this.lblCarWieght2.Name = "lblCarWieght2";
             this.lblCarWieght2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblCarWieght2.Size = new System.Drawing.Size(112, 36);
@@ -289,12 +289,12 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(583, 14);
+            this.label10.Location = new System.Drawing.Point(628, 14);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(113, 36);
             this.label10.TabIndex = 0;
-            this.label10.Text = "الوزنة الاولى";
+            this.label10.Text = "الوزنة الاولى :";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -618,7 +618,7 @@
             this.btnHome.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(-1, 120);
+            this.btnHome.Location = new System.Drawing.Point(11, 120);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(151, 60);
@@ -683,7 +683,7 @@
             this.btnPreview.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreview.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.Image")));
             this.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPreview.Location = new System.Drawing.Point(-1, 364);
+            this.btnPreview.Location = new System.Drawing.Point(11, 364);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(151, 60);
@@ -713,7 +713,7 @@
             this.btnSave_as_fw.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave_as_fw.Image = ((System.Drawing.Image)(resources.GetObject("btnSave_as_fw.Image")));
             this.btnSave_as_fw.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave_as_fw.Location = new System.Drawing.Point(-1, 265);
+            this.btnSave_as_fw.Location = new System.Drawing.Point(11, 265);
             this.btnSave_as_fw.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave_as_fw.Name = "btnSave_as_fw";
             this.btnSave_as_fw.Size = new System.Drawing.Size(151, 60);
