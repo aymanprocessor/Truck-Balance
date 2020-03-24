@@ -1566,9 +1566,9 @@
               <Value>loho31</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.21907cm</Top>
-              <Left>0.70241cm</Left>
-              <Height>0.99096cm</Height>
-              <Width>1.60338cm</Width>
+              <Left>0.7412cm</Left>
+              <Height>1.11267cm</Height>
+              <Width>1.86796cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -1599,7 +1599,7 @@
               <Top>0.51388in</Top>
               <Left>3.15639in</Left>
               <Height>0.30209in</Height>
-              <Width>1.2375in</Width>
+              <Width>0.9875in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -1634,7 +1634,7 @@
               <Top>0.51388in</Top>
               <Left>2.15861in</Left>
               <Height>0.30209in</Height>
-              <Width>1.17834in</Width>
+              <Width>0.92834in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1688,9 +1688,9 @@
               </Paragraphs>
               <rd:DefaultName>export_import</rd:DefaultName>
               <Top>0.51388in</Top>
-              <Left>0.91681in</Left>
+              <Left>1.04181in</Left>
               <Height>0.30209in</Height>
-              <Width>1.23958in</Width>
+              <Width>1.11458in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>

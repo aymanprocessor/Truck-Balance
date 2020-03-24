@@ -274,7 +274,7 @@
             this.button1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(587, 154);
+            this.button1.Location = new System.Drawing.Point(593, 154);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10);
             this.button1.Size = new System.Drawing.Size(324, 278);
@@ -293,7 +293,7 @@
             this.button2.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(257, 154);
+            this.button2.Location = new System.Drawing.Point(241, 154);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10);
             this.button2.Size = new System.Drawing.Size(324, 278);
@@ -310,9 +310,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(352, 9);
+            this.label1.Location = new System.Drawing.Point(360, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 56);
+            this.label1.Size = new System.Drawing.Size(393, 56);
             this.label1.TabIndex = 5;
             this.label1.Text = "شركة الالومنيوم العربية";
             // 
@@ -320,7 +320,7 @@
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDate.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Green;
+            this.lblDate.ForeColor = System.Drawing.Color.Crimson;
             this.lblDate.Location = new System.Drawing.Point(292, 72);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
