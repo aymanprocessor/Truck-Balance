@@ -53,7 +53,6 @@
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroTile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.metroTile1.Enabled = false;
             this.metroTile1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroTile1.Location = new System.Drawing.Point(34, 443);
             this.metroTile1.Name = "metroTile1";
@@ -69,6 +68,7 @@
             this.metroTile1.UseCustomForeColor = true;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
+            this.metroTile1.Visible = false;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTile2
@@ -76,7 +76,6 @@
             this.metroTile2.ActiveControl = null;
             this.metroTile2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroTile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.metroTile2.Enabled = false;
             this.metroTile2.ForeColor = System.Drawing.Color.Blue;
             this.metroTile2.Location = new System.Drawing.Point(390, 510);
             this.metroTile2.Name = "metroTile2";
@@ -92,6 +91,7 @@
             this.metroTile2.UseCustomForeColor = true;
             this.metroTile2.UseSelectable = true;
             this.metroTile2.UseTileImage = true;
+            this.metroTile2.Visible = false;
             this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile3
@@ -312,7 +312,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(352, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 56);
+            this.label1.Size = new System.Drawing.Size(393, 56);
             this.label1.TabIndex = 5;
             this.label1.Text = "شركة الالومنيوم العربية";
             // 

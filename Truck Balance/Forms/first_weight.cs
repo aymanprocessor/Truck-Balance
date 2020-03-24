@@ -32,6 +32,7 @@ namespace Truck_Balance.Forms
         private common com;
         private string id_val;
         private SerialPortReader serial;
+        private bool isSaved = false;
 
         public first_weight()
         {
@@ -40,6 +41,7 @@ namespace Truck_Balance.Forms
 
         public void first_weight_Load(object sender, EventArgs e)
         {
+            isSaved = false;
             if (Properties.Settings.Default.username == "admin")
             {
                 lblWeightReading.ReadOnly = false;
@@ -102,15 +104,27 @@ namespace Truck_Balance.Forms
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { //DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-          //    if (res == DialogResult.Yes)
-          //    {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
-            //disconnect();
-            serial.Disconnect();
-            //}
+        {
+            if (isSaved)
+            {
+                Main main = new Main();
+                main.Show();
+                this.Hide();
+                //disconnect();
+                serial.Disconnect();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    Main main = new Main();
+                    main.Show();
+                    this.Hide();
+                    //disconnect();
+                    serial.Disconnect();
+                }
+            }
         }
 
         private void btnSecondWeight_Click(object sender, EventArgs e)
@@ -493,6 +507,7 @@ namespace Truck_Balance.Forms
                                 //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 btnSecondWeight.Enabled = true;
                                 btnNewWeight.Enabled = true;
+                                isSaved = true;
                             }
                         }
                     }
@@ -567,6 +582,7 @@ namespace Truck_Balance.Forms
                                 //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 btnNewWeight.Enabled = true;
                                 btnSecondWeight.Enabled = true;
+                                isSaved = true;
                             }
                         }
                     }
@@ -672,17 +688,14 @@ namespace Truck_Balance.Forms
 
         private void lblWeightReading_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void tbCarNumber_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

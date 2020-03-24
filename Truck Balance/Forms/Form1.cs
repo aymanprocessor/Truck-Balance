@@ -90,8 +90,8 @@ namespace Truck_Balance
         {
             if (Properties.Settings.Default.username == "admin")
             {
-                metroTile1.Enabled = true;
-                metroTile2.Enabled = true;
+                metroTile1.Visible = true;
+                metroTile2.Visible = true;
             }
         }
 
