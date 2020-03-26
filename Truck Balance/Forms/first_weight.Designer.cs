@@ -126,6 +126,7 @@
             this.cbCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbCustomerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbCustomerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCustomerName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCustomerName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCustomerName.ForeColor = System.Drawing.Color.Teal;
             this.cbCustomerName.FormattingEnabled = true;
@@ -545,7 +546,7 @@
             // 
             this.btnRecordWeight.BackColor = System.Drawing.Color.Silver;
             this.btnRecordWeight.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecordWeight.Location = new System.Drawing.Point(451, 75);
+            this.btnRecordWeight.Location = new System.Drawing.Point(381, 75);
             this.btnRecordWeight.Name = "btnRecordWeight";
             this.btnRecordWeight.Size = new System.Drawing.Size(187, 42);
             this.btnRecordWeight.TabIndex = 1;
@@ -577,7 +578,7 @@
             this.btnNewWeight.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnNewWeight.Image")));
             this.btnNewWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewWeight.Location = new System.Drawing.Point(19, 331);
+            this.btnNewWeight.Location = new System.Drawing.Point(19, 332);
             this.btnNewWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewWeight.Name = "btnNewWeight";
             this.btnNewWeight.Size = new System.Drawing.Size(154, 60);
@@ -595,7 +596,7 @@
             this.btnSave.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(19, 206);
+            this.btnSave.Location = new System.Drawing.Point(19, 207);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(154, 60);
@@ -613,7 +614,7 @@
             this.btnSecondWeight.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSecondWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnSecondWeight.Image")));
             this.btnSecondWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSecondWeight.Location = new System.Drawing.Point(19, 408);
+            this.btnSecondWeight.Location = new System.Drawing.Point(19, 409);
             this.btnSecondWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnSecondWeight.Name = "btnSecondWeight";
             this.btnSecondWeight.Size = new System.Drawing.Size(154, 60);

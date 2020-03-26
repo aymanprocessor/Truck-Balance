@@ -15,7 +15,9 @@ namespace Truck_Balance.Forms
 {
     public partial class Setting : Form
     {
-        SerialPortReader sp;
+        private SerialPortReader sp;
+        private bool isSaved = false;
+
         public Setting()
         {
             InitializeComponent();
@@ -23,11 +25,11 @@ namespace Truck_Balance.Forms
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Setting_Load(object sender, EventArgs e)
         {
+            isSaved = false;
             sp = new SerialPortReader(this, label5);
             loadPort();
             loadPortSetting();
@@ -46,8 +48,6 @@ namespace Truck_Balance.Forms
             }
         }
 
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             loadPort();
@@ -63,7 +63,6 @@ namespace Truck_Balance.Forms
             txtDbConn.Text = Properties.Settings.Default.dbpath;
             txtStart.Text = Properties.Settings.Default.start;
             txtEnd.Text = Properties.Settings.Default.end;
-
         }
 
         private void savePortSetting(string port, string baudrate, string parity, string databits, string stopbits)
@@ -81,6 +80,7 @@ namespace Truck_Balance.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             savePortSetting(cbPort.Text, cbBaudrate.Text, cbParity.Text, cbDatabits.Text, cbStopbits.Text);
+            isSaved = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,38 +91,25 @@ namespace Truck_Balance.Forms
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-
             try
             {
                 sp.Connect();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
-      
-       
-
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-
                 sp.Disconnect();
-              
-                
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -130,12 +117,12 @@ namespace Truck_Balance.Forms
         {
             Properties.Settings.Default.dbpath = txtDbConn.Text;
             Properties.Settings.Default.Save();
+            isSaved = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-        
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 txtDbConn.Text = openFileDialog1.FileName;
             }
@@ -143,16 +130,28 @@ namespace Truck_Balance.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            sp.Disconnect();
-           
-            Hide();
+            if (isSaved)
+            {
+                sp.Disconnect();
 
+                Hide();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    sp.Disconnect();
+
+                    Hide();
+                }
+            }
         }
 
         private void Setting_FormClosing(object sender, FormClosingEventArgs e)
         {
             sp.Disconnect();
-          
+
             Hide();
         }
     }

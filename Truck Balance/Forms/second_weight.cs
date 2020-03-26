@@ -27,6 +27,7 @@ namespace Truck_Balance.Forms
         private string goodsPath = String.Format("{0}\\data\\goods.txt", Environment.CurrentDirectory);
         private string trucksPath = String.Format("{0}\\data\\trucks.txt", Environment.CurrentDirectory);
         private string productPath = String.Format("{0}\\data\\product.txt", Environment.CurrentDirectory);
+        private bool isSaved = false;
 
         public second_weight()
         {
@@ -35,6 +36,7 @@ namespace Truck_Balance.Forms
 
         private void second_weight_Load(object sender, EventArgs e)
         {
+            isSaved = false;
             btnPreview.Enabled = false;
             btnPrint.Enabled = false;
             if (Properties.Settings.Default.username == "admin")
@@ -119,14 +121,24 @@ namespace Truck_Balance.Forms
         private void btnHome_Click(object sender, EventArgs e)
         {
             {
-                // DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //if (res == DialogResult.Yes)
-                // {
-                sp.Disconnect();
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-                // }
+                if (isSaved)
+                {
+                    sp.Disconnect();
+                    Main main = new Main();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        sp.Disconnect();
+                        Main main = new Main();
+                        main.Show();
+                        this.Hide();
+                    }
+                }
             }
         }
 
@@ -243,6 +255,7 @@ namespace Truck_Balance.Forms
                             //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                             btnPrint.Enabled = true;
                             btnPreview.Enabled = true;
+                            isSaved = true;
                         }
                     }
                 }
@@ -461,12 +474,10 @@ namespace Truck_Balance.Forms
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

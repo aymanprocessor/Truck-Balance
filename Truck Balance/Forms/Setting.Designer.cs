@@ -121,7 +121,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 24);
             this.button3.TabIndex = 4;
-            this.button3.Text = "apply";
+            this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -199,7 +199,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(73, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(32, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "Start";
             // 
@@ -279,7 +279,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(29, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Stop bits :";
             // 
@@ -305,7 +305,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(61, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "Data bits :";
             // 
@@ -326,7 +326,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(46, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Parity :";
             // 
@@ -347,7 +347,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Baudrate :";
             // 
@@ -368,7 +368,7 @@
             this.lblCom.AutoSize = true;
             this.lblCom.Location = new System.Drawing.Point(53, 31);
             this.lblCom.Name = "lblCom";
-            this.lblCom.Size = new System.Drawing.Size(34, 13);
+            this.lblCom.Size = new System.Drawing.Size(35, 15);
             this.lblCom.TabIndex = 1;
             this.lblCom.Text = "Port :";
             // 
@@ -389,13 +389,13 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(538, 345);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 38);
             this.button5.TabIndex = 1;
-            this.button5.Text = "خروج";
+            this.button5.Text = "عودة";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
