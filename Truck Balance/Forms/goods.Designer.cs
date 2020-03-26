@@ -56,7 +56,7 @@
             this.listBox1.Location = new System.Drawing.Point(12, 87);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(420, 264);
+            this.listBox1.Size = new System.Drawing.Size(542, 364);
             this.listBox1.TabIndex = 3;
             // 
             // textBox1
@@ -64,7 +64,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(112, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 26);
+            this.textBox1.Size = new System.Drawing.Size(442, 26);
             this.textBox1.TabIndex = 4;
             // 
             // button2
@@ -81,7 +81,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(338, 45);
+            this.button3.Location = new System.Drawing.Point(460, 45);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 33);
             this.button3.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 355);
+            this.ClientSize = new System.Drawing.Size(566, 461);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);

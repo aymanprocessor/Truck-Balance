@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 174);
+            this.label1.Location = new System.Drawing.Point(353, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 19);
             this.label1.TabIndex = 0;
@@ -53,11 +53,12 @@
             // 
             // txtOldPassword
             // 
+            this.txtOldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtOldPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPassword.Location = new System.Drawing.Point(85, 196);
+            this.txtOldPassword.Location = new System.Drawing.Point(57, 153);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '*';
-            this.txtOldPassword.Size = new System.Drawing.Size(216, 26);
+            this.txtOldPassword.Size = new System.Drawing.Size(290, 26);
             this.txtOldPassword.TabIndex = 0;
             this.txtOldPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -65,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 231);
+            this.label2.Location = new System.Drawing.Point(353, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 19);
             this.label2.TabIndex = 0;
@@ -73,11 +74,12 @@
             // 
             // txtNewPassword
             // 
+            this.txtNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtNewPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(85, 253);
+            this.txtNewPassword.Location = new System.Drawing.Point(57, 210);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(216, 26);
+            this.txtNewPassword.Size = new System.Drawing.Size(290, 26);
             this.txtNewPassword.TabIndex = 1;
             this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -85,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(165, 291);
+            this.label3.Location = new System.Drawing.Point(353, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 19);
             this.label3.TabIndex = 0;
@@ -93,18 +95,19 @@
             // 
             // txtConfirmPassword
             // 
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtConfirmPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(85, 313);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(57, 270);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(216, 26);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(290, 26);
             this.txtConfirmPassword.TabIndex = 2;
             this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(144, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(219, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -115,7 +118,7 @@
             // 
             this.btnChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnChange.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChange.Location = new System.Drawing.Point(85, 369);
+            this.btnChange.Location = new System.Drawing.Point(243, 354);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(104, 40);
             this.btnChange.TabIndex = 3;
@@ -127,7 +130,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExit.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(197, 369);
+            this.btnExit.Location = new System.Drawing.Point(57, 354);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 40);
             this.btnExit.TabIndex = 4;
@@ -139,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 433);
+            this.ClientSize = new System.Drawing.Size(529, 433);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.pictureBox1);
@@ -154,7 +157,7 @@
             this.MinimizeBox = false;
             this.Name = "passwordChanger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "passwordChanger";
+            this.Text = "Change Password";
             this.Load += new System.EventHandler(this.passwordChanger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

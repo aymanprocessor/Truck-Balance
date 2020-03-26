@@ -46,7 +46,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(589, 3);
+            this.button1.Location = new System.Drawing.Point(833, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 33);
             this.button1.TabIndex = 1;
@@ -58,9 +58,9 @@
             // 
             this.tbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.Location = new System.Drawing.Point(468, 38);
+            this.tbName.Location = new System.Drawing.Point(580, 38);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(163, 30);
+            this.tbName.Size = new System.Drawing.Size(299, 29);
             this.tbName.TabIndex = 4;
             // 
             // button2
@@ -68,7 +68,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(304, 3);
+            this.button2.Location = new System.Drawing.Point(410, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 33);
             this.button2.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(913, 369);
             this.dataGridView1.TabIndex = 5;
             // 
             // tbAddress
@@ -98,7 +98,7 @@
             this.tbAddress.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.Location = new System.Drawing.Point(21, 38);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(184, 30);
+            this.tbAddress.Size = new System.Drawing.Size(184, 29);
             this.tbAddress.TabIndex = 4;
             // 
             // label1
@@ -106,10 +106,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(641, 38);
+            this.label1.Location = new System.Drawing.Point(889, 38);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(43, 24);
+            this.label1.Size = new System.Drawing.Size(42, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "الاسم";
             // 
@@ -121,7 +121,7 @@
             this.label2.Location = new System.Drawing.Point(211, 38);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(55, 24);
+            this.label2.Size = new System.Drawing.Size(53, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "العنوان";
             // 
@@ -130,10 +130,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(398, 38);
+            this.label3.Location = new System.Drawing.Point(510, 38);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "المحافظة";
             // 
@@ -144,9 +144,9 @@
             this.cbGovernment.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGovernment.FormattingEnabled = true;
             this.cbGovernment.IntegralHeight = false;
-            this.cbGovernment.Location = new System.Drawing.Point(270, 38);
+            this.cbGovernment.Location = new System.Drawing.Point(315, 38);
             this.cbGovernment.Name = "cbGovernment";
-            this.cbGovernment.Size = new System.Drawing.Size(122, 30);
+            this.cbGovernment.Size = new System.Drawing.Size(189, 30);
             this.cbGovernment.TabIndex = 7;
             // 
             // button3
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 446);
+            this.ClientSize = new System.Drawing.Size(946, 446);
             this.Controls.Add(this.cbGovernment);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

@@ -71,7 +71,7 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(251, 382);
+            this.btnNext.Location = new System.Drawing.Point(366, 382);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(107, 56);
             this.btnNext.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             this.btnPrev.Enabled = false;
             this.btnPrev.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrev.Location = new System.Drawing.Point(364, 382);
+            this.btnPrev.Location = new System.Drawing.Point(587, 382);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(107, 56);
             this.btnPrev.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExit.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(604, 382);
+            this.btnExit.Location = new System.Drawing.Point(12, 382);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(107, 56);
             this.btnExit.TabIndex = 0;
@@ -141,9 +141,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(282, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(31, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -153,7 +153,7 @@
             // 
             this.cbPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPort.FormattingEnabled = true;
-            this.cbPort.Location = new System.Drawing.Point(160, 51);
+            this.cbPort.Location = new System.Drawing.Point(160, 48);
             this.cbPort.Name = "cbPort";
             this.cbPort.Size = new System.Drawing.Size(112, 33);
             this.cbPort.TabIndex = 5;
@@ -336,7 +336,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(348, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 33);
+            this.label7.Size = new System.Drawing.Size(107, 32);
             this.label7.TabIndex = 5;
             this.label7.Text = "Length";
             // 
@@ -356,7 +356,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(160, 125);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 33);
+            this.label6.Size = new System.Drawing.Size(77, 32);
             this.label6.TabIndex = 6;
             this.label6.Text = "Start";
             // 
@@ -368,7 +368,7 @@
             this.lblWeightReading.ForeColor = System.Drawing.Color.Lime;
             this.lblWeightReading.Location = new System.Drawing.Point(272, 29);
             this.lblWeightReading.Name = "lblWeightReading";
-            this.lblWeightReading.Size = new System.Drawing.Size(159, 56);
+            this.lblWeightReading.Size = new System.Drawing.Size(154, 55);
             this.lblWeightReading.TabIndex = 4;
             this.lblWeightReading.Text = "00000";
             // 

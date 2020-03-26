@@ -100,9 +100,9 @@
             this.groupBox3.Controls.Add(this.txtDbConn);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(11, 218);
+            this.groupBox3.Location = new System.Drawing.Point(11, 226);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(568, 64);
+            this.groupBox3.Size = new System.Drawing.Size(575, 64);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Database";
@@ -144,9 +144,9 @@
             this.groupBox2.Controls.Add(this.txtStart);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(237, 14);
+            this.groupBox2.Location = new System.Drawing.Point(241, 14);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(342, 198);
+            this.groupBox2.Size = new System.Drawing.Size(343, 198);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reading ";
@@ -183,7 +183,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(181, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 15);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Length";
             // 
@@ -199,7 +199,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(73, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 15);
+            this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Start";
             // 
@@ -208,7 +208,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(171, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 15);
+            this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "000";
             // 
@@ -227,9 +227,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbStopbits);
             this.groupBox1.Controls.Add(this.lblCom);
-            this.groupBox1.Location = new System.Drawing.Point(11, 11);
+            this.groupBox1.Location = new System.Drawing.Point(11, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(220, 201);
+            this.groupBox1.Size = new System.Drawing.Size(220, 198);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Port Setting";
@@ -279,7 +279,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(29, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Stop bits :";
             // 
@@ -305,7 +305,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Data bits :";
             // 
@@ -326,7 +326,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(46, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Parity :";
             // 
@@ -347,7 +347,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Baudrate :";
             // 
@@ -368,7 +368,7 @@
             this.lblCom.AutoSize = true;
             this.lblCom.Location = new System.Drawing.Point(53, 31);
             this.lblCom.Name = "lblCom";
-            this.lblCom.Size = new System.Drawing.Size(35, 15);
+            this.lblCom.Size = new System.Drawing.Size(34, 13);
             this.lblCom.TabIndex = 1;
             this.lblCom.Text = "Port :";
             // 

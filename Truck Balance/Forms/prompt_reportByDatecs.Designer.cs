@@ -45,43 +45,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 100);
+            this.label1.Location = new System.Drawing.Point(367, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 24);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "من ";
+            this.label1.Text = ": من تاريخ ";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(174, 97);
+            this.dateTimePicker1.Location = new System.Drawing.Point(161, 109);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(380, 136);
+            this.label2.Location = new System.Drawing.Point(367, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 24);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "الى";
+            this.label2.Text = ": الى تاريخ ";
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(174, 133);
+            this.dateTimePicker2.Location = new System.Drawing.Point(161, 145);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 30);
             this.dateTimePicker2.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(291, 245);
+            this.button1.Location = new System.Drawing.Point(321, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 42);
             this.button1.TabIndex = 2;
@@ -92,7 +92,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(172, 245);
+            this.button2.Location = new System.Drawing.Point(161, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 42);
             this.button2.TabIndex = 2;
@@ -106,7 +106,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(591, 25);
+            this.panel1.Size = new System.Drawing.Size(640, 13);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -115,7 +115,7 @@
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Location = new System.Drawing.Point(134, 182);
+            this.panel2.Location = new System.Drawing.Point(147, 209);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 48);
             this.panel2.TabIndex = 4;
@@ -126,7 +126,7 @@
             this.radioButton2.Location = new System.Drawing.Point(14, 10);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton2.Size = new System.Drawing.Size(67, 28);
+            this.radioButton2.Size = new System.Drawing.Size(64, 28);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.Text = "اخرى";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             this.radioButton1.Location = new System.Drawing.Point(174, 10);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton1.Size = new System.Drawing.Size(143, 28);
+            this.radioButton1.Size = new System.Drawing.Size(136, 28);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "قطاعات الومنيوم";
@@ -146,9 +146,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 45);
+            this.textBox1.Location = new System.Drawing.Point(147, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(538, 31);
+            this.textBox1.Size = new System.Drawing.Size(322, 30);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "عرض بيانات الاوزان خلال الفترة";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(591, 313);
+            this.ClientSize = new System.Drawing.Size(640, 430);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
