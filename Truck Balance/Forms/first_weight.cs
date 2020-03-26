@@ -105,9 +105,9 @@ namespace Truck_Balance.Forms
         { //DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
           //    if (res == DialogResult.Yes)
           //    {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
+            //Main main = new Main();
+            //main.Show();
+            Hide();
             //disconnect();
             serial.Disconnect();
             //}

@@ -48,6 +48,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
@@ -68,13 +69,13 @@
             this.معاينةToolStripMenuItem,
             this.مسحToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(106, 70);
             // 
             // طباعةToolStripMenuItem
             // 
             this.طباعةToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("طباعةToolStripMenuItem.Image")));
             this.طباعةToolStripMenuItem.Name = "طباعةToolStripMenuItem";
-            this.طباعةToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.طباعةToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.طباعةToolStripMenuItem.Text = "طباعة";
             this.طباعةToolStripMenuItem.Click += new System.EventHandler(this.طباعةToolStripMenuItem_Click);
             // 
@@ -82,7 +83,7 @@
             // 
             this.معاينةToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("معاينةToolStripMenuItem.Image")));
             this.معاينةToolStripMenuItem.Name = "معاينةToolStripMenuItem";
-            this.معاينةToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.معاينةToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.معاينةToolStripMenuItem.Text = "معاينة";
             this.معاينةToolStripMenuItem.Click += new System.EventHandler(this.معاينةToolStripMenuItem_Click);
             // 
@@ -91,7 +92,7 @@
             this.مسحToolStripMenuItem.Enabled = false;
             this.مسحToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("مسحToolStripMenuItem.Image")));
             this.مسحToolStripMenuItem.Name = "مسحToolStripMenuItem";
-            this.مسحToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.مسحToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.مسحToolStripMenuItem.Text = "مسح";
             this.مسحToolStripMenuItem.Click += new System.EventHandler(this.مسحToolStripMenuItem_Click);
             // 

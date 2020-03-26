@@ -25,12 +25,12 @@ namespace Truck_Balance
 
         private void metroTile12_Click(object sender, EventArgs e)
         {
+           
             second_weight second_Weight = new second_weight();
-            second_Weight.Show();
-            prevWieght prevwieght = new prevWieght(second_Weight);
+           prevWieght prevwieght = new prevWieght(second_Weight);
             prevwieght.Show();
-
-           // this.Hide();
+            second_Weight.Show();
+            this.Hide();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -127,7 +127,8 @@ namespace Truck_Balance
         {
             first_weight first_weight = new first_weight();
             first_weight.Show();
-           // this.Hide();
+           // first_weight.TopMost = true;
+           this.Hide();
         }
 
         private void button2_MouseHover(object sender, EventArgs e)

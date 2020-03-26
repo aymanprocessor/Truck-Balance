@@ -81,6 +81,7 @@
             this.metroTile2.Location = new System.Drawing.Point(352, 510);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(145, 75);
+            this.metroTile2.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTile2.TabIndex = 3;
             this.metroTile2.Text = "الاعدادات";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -232,6 +233,7 @@
             this.metroTile9.Location = new System.Drawing.Point(654, 510);
             this.metroTile9.Name = "metroTile9";
             this.metroTile9.Size = new System.Drawing.Size(145, 75);
+            this.metroTile9.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTile9.TabIndex = 3;
             this.metroTile9.Text = "مراجعة بيانات";
             this.metroTile9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -254,6 +256,7 @@
             this.metroTile10.Location = new System.Drawing.Point(503, 510);
             this.metroTile10.Name = "metroTile10";
             this.metroTile10.Size = new System.Drawing.Size(145, 75);
+            this.metroTile10.Style = MetroFramework.MetroColorStyle.White;
             this.metroTile10.TabIndex = 3;
             this.metroTile10.Text = "تقارير";
             this.metroTile10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
