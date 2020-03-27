@@ -104,27 +104,15 @@ namespace Truck_Balance.Forms
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            if (isSaved)
-            {
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-                //disconnect();
-                serial.Disconnect();
-            }
-            else
-            {
-                DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
-                {
-                    Main main = new Main();
-                    main.Show();
-                    this.Hide();
-                    //disconnect();
-                    serial.Disconnect();
-                }
-            }
+        { //DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+          //    if (res == DialogResult.Yes)
+          //    {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+            //disconnect();
+            serial.Disconnect();
+            //}
         }
 
         private void btnSecondWeight_Click(object sender, EventArgs e)
