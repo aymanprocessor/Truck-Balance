@@ -546,7 +546,7 @@
             // 
             this.btnRecordWeight.BackColor = System.Drawing.Color.Silver;
             this.btnRecordWeight.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecordWeight.Location = new System.Drawing.Point(381, 75);
+            this.btnRecordWeight.Location = new System.Drawing.Point(457, 75);
             this.btnRecordWeight.Name = "btnRecordWeight";
             this.btnRecordWeight.Size = new System.Drawing.Size(187, 42);
             this.btnRecordWeight.TabIndex = 1;
@@ -596,7 +596,7 @@
             this.btnSave.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(19, 207);
+            this.btnSave.Location = new System.Drawing.Point(19, 206);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(154, 60);

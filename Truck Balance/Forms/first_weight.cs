@@ -218,8 +218,8 @@ namespace Truck_Balance.Forms
                 MessageBox.Show("من فضلك تأكد من قراءة الميزان", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            lblTime1.Text = DateTime.Now.ToString("hh:mm tt");
-            lblDate1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblTime1.Text = DateTime.Now.ToString("hh:mm tt"); //("hh:mm tt");
+            lblDate1.Text = DateTime.Now.ToString("dd/MM/yyyy"); //("dd/MM/yyyy");
             btnSave.Enabled = true;
             //if (!lblCarWeight1.Text.All(char.IsDigit) || !lblWeightReading.Text.All(char.IsDigit))
             //{

@@ -76,6 +76,8 @@
             this.cbUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cbUser.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "m saad"});
             this.cbUser.Location = new System.Drawing.Point(220, 249);
             this.cbUser.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cbUser.Name = "cbUser";
