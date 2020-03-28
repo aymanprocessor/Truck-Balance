@@ -580,7 +580,16 @@ namespace Truck_Balance.Forms
             }
             catch (Exception ex)
             {
+                if (ex.HResult.ToString().Equals("-2147467259"))
+                {
+                    MessageBox.Show("اسم العميل غير موجود", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cbCustomerName.Focus();
+                    return;
+                }
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
+                
+
             }
         }
 

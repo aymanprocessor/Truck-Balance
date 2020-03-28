@@ -126,7 +126,6 @@
             this.cbCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbCustomerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbCustomerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCustomerName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCustomerName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCustomerName.ForeColor = System.Drawing.Color.Teal;
             this.cbCustomerName.FormattingEnabled = true;

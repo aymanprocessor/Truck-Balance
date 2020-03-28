@@ -69,7 +69,6 @@
             this.metroTile1.UseCustomForeColor = true;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
-            this.metroTile1.Visible = false;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTile2
@@ -94,7 +93,6 @@
             this.metroTile2.UseCustomForeColor = true;
             this.metroTile2.UseSelectable = true;
             this.metroTile2.UseTileImage = true;
-            this.metroTile2.Visible = false;
             this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile3
