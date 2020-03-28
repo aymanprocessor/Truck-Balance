@@ -34,6 +34,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNewWeight = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -88,10 +89,10 @@
             this.btnSecondWeight.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSecondWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnSecondWeight.Image")));
             this.btnSecondWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSecondWeight.Location = new System.Drawing.Point(1035, 78);
+            this.btnSecondWeight.Location = new System.Drawing.Point(13, 75);
             this.btnSecondWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnSecondWeight.Name = "btnSecondWeight";
-            this.btnSecondWeight.Size = new System.Drawing.Size(43, 34);
+            this.btnSecondWeight.Size = new System.Drawing.Size(131, 34);
             this.btnSecondWeight.TabIndex = 11;
             this.btnSecondWeight.Text = "الوزنة الاولى";
             this.btnSecondWeight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -107,7 +108,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.Location = new System.Drawing.Point(-1, 431);
+            this.btnPrint.Location = new System.Drawing.Point(12, 431);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(151, 60);
@@ -125,7 +126,7 @@
             this.btnSave.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(-1, 201);
+            this.btnSave.Location = new System.Drawing.Point(12, 201);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(151, 60);
@@ -142,10 +143,10 @@
             this.btnNewWeight.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewWeight.Image = ((System.Drawing.Image)(resources.GetObject("btnNewWeight.Image")));
             this.btnNewWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewWeight.Location = new System.Drawing.Point(1035, 78);
+            this.btnNewWeight.Location = new System.Drawing.Point(13, 73);
             this.btnNewWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewWeight.Name = "btnNewWeight";
-            this.btnNewWeight.Size = new System.Drawing.Size(43, 37);
+            this.btnNewWeight.Size = new System.Drawing.Size(145, 37);
             this.btnNewWeight.TabIndex = 14;
             this.btnNewWeight.Text = "وزنة جديدة";
             this.btnNewWeight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -157,6 +158,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Khaki;
+            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.lblTime);
             this.groupBox2.Controls.Add(this.lblDate);
             this.groupBox2.Controls.Add(this.label16);
@@ -171,12 +173,27 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(394, 161);
+            this.groupBox2.Size = new System.Drawing.Size(420, 161);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Tag = "sdfgdfg";
             this.groupBox2.Text = "بيانات الوزن";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(66, 37);
+            this.label18.Name = "label18";
+            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label18.Size = new System.Drawing.Size(34, 24);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "كجم";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         
             // 
             // lblTime
             // 
@@ -184,7 +201,7 @@
             this.lblTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTime.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTime.Location = new System.Drawing.Point(34, 117);
+            this.lblTime.Location = new System.Drawing.Point(66, 117);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTime.Size = new System.Drawing.Size(226, 26);
@@ -197,12 +214,19 @@
             this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDate.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDate.Location = new System.Drawing.Point(34, 76);
+            this.lblDate.Location = new System.Drawing.Point(66, 76);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblDate.Size = new System.Drawing.Size(226, 26);
             this.lblDate.TabIndex = 0;
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(100, 23);
+            this.label16.TabIndex = 1;
             // 
             // lblCarWeight
             // 
@@ -210,12 +234,13 @@
             this.lblCarWeight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCarWeight.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCarWeight.Location = new System.Drawing.Point(75, 35);
+            this.lblCarWeight.Location = new System.Drawing.Point(107, 35);
             this.lblCarWeight.Name = "lblCarWeight";
             this.lblCarWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblCarWeight.Size = new System.Drawing.Size(185, 26);
             this.lblCarWeight.TabIndex = 0;
             this.lblCarWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      
             // 
             // label15
             // 
@@ -223,10 +248,10 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(266, 116);
+            this.label15.Location = new System.Drawing.Point(298, 116);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label15.Size = new System.Drawing.Size(62, 24);
+            this.label15.Size = new System.Drawing.Size(60, 24);
             this.label15.TabIndex = 0;
             this.label15.Text = "الوقت :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,10 +262,10 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(266, 75);
+            this.label13.Location = new System.Drawing.Point(298, 75);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(71, 24);
+            this.label13.Size = new System.Drawing.Size(67, 24);
             this.label13.TabIndex = 0;
             this.label13.Text = "التاريخ :";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,13 +276,25 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(266, 34);
+            this.label11.Location = new System.Drawing.Point(298, 34);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label11.Size = new System.Drawing.Size(62, 24);
+            this.label11.Size = new System.Drawing.Size(61, 24);
             this.label11.TabIndex = 0;
             this.label11.Text = "الوزن :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRecordWeight
+            // 
+            this.btnRecordWeight.BackColor = System.Drawing.Color.Silver;
+            this.btnRecordWeight.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordWeight.Location = new System.Drawing.Point(454, 70);
+            this.btnRecordWeight.Name = "btnRecordWeight";
+            this.btnRecordWeight.Size = new System.Drawing.Size(192, 43);
+            this.btnRecordWeight.TabIndex = 21;
+            this.btnRecordWeight.Text = "تسجيل الوزنة الثانية";
+            this.btnRecordWeight.UseVisualStyleBackColor = false;
+            this.btnRecordWeight.Click += new System.EventHandler(this.btnRecordWeight_Click);
             // 
             // lblCarWieght2
             // 
@@ -290,10 +327,10 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(906, 82);
+            this.label9.Location = new System.Drawing.Point(22, 78);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(110, 26);
+            this.label9.Size = new System.Drawing.Size(103, 24);
             this.label9.TabIndex = 0;
             this.label9.Text = "قراءة الميزان";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,7 +373,7 @@
             this.cbProduct.FormattingEnabled = true;
             this.cbProduct.Location = new System.Drawing.Point(34, 36);
             this.cbProduct.Name = "cbProduct";
-            this.cbProduct.Size = new System.Drawing.Size(226, 32);
+            this.cbProduct.Size = new System.Drawing.Size(258, 32);
             this.cbProduct.TabIndex = 2;
             // 
             // cbCustomerName
@@ -349,7 +386,7 @@
             this.cbCustomerName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbCustomerName.FormattingEnabled = true;
-            this.cbCustomerName.Location = new System.Drawing.Point(425, 36);
+            this.cbCustomerName.Location = new System.Drawing.Point(448, 36);
             this.cbCustomerName.Name = "cbCustomerName";
             this.cbCustomerName.Size = new System.Drawing.Size(339, 32);
             this.cbCustomerName.TabIndex = 2;
@@ -360,10 +397,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(266, 36);
+            this.label4.Location = new System.Drawing.Point(298, 36);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(108, 24);
+            this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "نوع الحمولة :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,10 +411,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(771, 36);
+            this.label1.Location = new System.Drawing.Point(794, 36);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(97, 24);
+            this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "اسم العميل :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,10 +425,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(771, 84);
+            this.label2.Location = new System.Drawing.Point(794, 84);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(102, 24);
+            this.label2.Size = new System.Drawing.Size(95, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "اسم السائق :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -402,10 +439,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(266, 84);
+            this.label3.Location = new System.Drawing.Point(298, 84);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(105, 24);
+            this.label3.Size = new System.Drawing.Size(101, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "نوع السيارة :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,7 +455,7 @@
             this.label5.Location = new System.Drawing.Point(521, 205);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(108, 24);
+            this.label5.Size = new System.Drawing.Size(103, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "نوع الحمولة :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +487,7 @@
             this.cbDriverName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDriverName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbDriverName.FormattingEnabled = true;
-            this.cbDriverName.Location = new System.Drawing.Point(425, 84);
+            this.cbDriverName.Location = new System.Drawing.Point(448, 84);
             this.cbDriverName.Name = "cbDriverName";
             this.cbDriverName.Size = new System.Drawing.Size(339, 32);
             this.cbDriverName.TabIndex = 2;
@@ -467,7 +504,7 @@
             this.cbCarType.FormattingEnabled = true;
             this.cbCarType.Location = new System.Drawing.Point(34, 84);
             this.cbCarType.Name = "cbCarType";
-            this.cbCarType.Size = new System.Drawing.Size(226, 32);
+            this.cbCarType.Size = new System.Drawing.Size(258, 32);
             this.cbCarType.TabIndex = 2;
             // 
             // lblCode
@@ -529,9 +566,9 @@
             this.tbGoodNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbGoodNumber.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbGoodNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbGoodNumber.Location = new System.Drawing.Point(26, 74);
+            this.tbGoodNumber.Location = new System.Drawing.Point(35, 72);
             this.tbGoodNumber.Name = "tbGoodNumber";
-            this.tbGoodNumber.Size = new System.Drawing.Size(189, 30);
+            this.tbGoodNumber.Size = new System.Drawing.Size(318, 30);
             this.tbGoodNumber.TabIndex = 5;
             this.tbGoodNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -540,9 +577,9 @@
             this.tbCarNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbCarNumber.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCarNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbCarNumber.Location = new System.Drawing.Point(26, 33);
+            this.tbCarNumber.Location = new System.Drawing.Point(35, 31);
             this.tbCarNumber.Name = "tbCarNumber";
-            this.tbCarNumber.Size = new System.Drawing.Size(189, 30);
+            this.tbCarNumber.Size = new System.Drawing.Size(318, 30);
             this.tbCarNumber.TabIndex = 5;
             this.tbCarNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -551,9 +588,9 @@
             this.tbNote.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbNote.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbNote.Location = new System.Drawing.Point(26, 115);
+            this.tbNote.Location = new System.Drawing.Point(35, 113);
             this.tbNote.Name = "tbNote";
-            this.tbNote.Size = new System.Drawing.Size(189, 30);
+            this.tbNote.Size = new System.Drawing.Size(318, 30);
             this.tbNote.TabIndex = 5;
             this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -563,10 +600,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(372, 118);
+            this.label6.Location = new System.Drawing.Point(359, 118);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(100, 24);
+            this.label6.Size = new System.Drawing.Size(96, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "ملاحظــــات :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -577,10 +614,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(372, 36);
+            this.label7.Location = new System.Drawing.Point(359, 36);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(102, 24);
+            this.label7.Size = new System.Drawing.Size(98, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "رقم السيارة :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -591,10 +628,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(372, 77);
+            this.label8.Location = new System.Drawing.Point(359, 77);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(114, 24);
+            this.label8.Size = new System.Drawing.Size(109, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "رقم المقطورة :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,7 +643,7 @@
             this.btnHome.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(-1, 120);
+            this.btnHome.Location = new System.Drawing.Point(12, 120);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(151, 60);
@@ -640,10 +677,10 @@
             this.groupBox3.Controls.Add(this.tbGoodNumber);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox3.Location = new System.Drawing.Point(575, 331);
+            this.groupBox3.Location = new System.Drawing.Point(601, 331);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(510, 161);
+            this.groupBox3.Size = new System.Drawing.Size(484, 161);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "بيانات السيارة";
@@ -658,7 +695,7 @@
             this.lblWeightReading.Location = new System.Drawing.Point(800, 0);
             this.lblWeightReading.Multiline = true;
             this.lblWeightReading.Name = "lblWeightReading";
-            this.lblWeightReading.Size = new System.Drawing.Size(223, 63);
+            this.lblWeightReading.Size = new System.Drawing.Size(210, 63);
             this.lblWeightReading.TabIndex = 17;
             this.lblWeightReading.Text = "00000";
             this.lblWeightReading.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -671,7 +708,7 @@
             this.btnPreview.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreview.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.Image")));
             this.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPreview.Location = new System.Drawing.Point(-1, 364);
+            this.btnPreview.Location = new System.Drawing.Point(12, 364);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(151, 60);
@@ -701,7 +738,7 @@
             this.btnSave_as_fw.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave_as_fw.Image = ((System.Drawing.Image)(resources.GetObject("btnSave_as_fw.Image")));
             this.btnSave_as_fw.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave_as_fw.Location = new System.Drawing.Point(-1, 265);
+            this.btnSave_as_fw.Location = new System.Drawing.Point(12, 265);
             this.btnSave_as_fw.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave_as_fw.Name = "btnSave_as_fw";
             this.btnSave_as_fw.Size = new System.Drawing.Size(151, 60);
@@ -772,6 +809,7 @@
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Teal;
+            this.Text = "تسجيل الوزنة الثانية";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.second_weight_FormClosing);
             this.Load += new System.EventHandler(this.second_weight_Load);
@@ -836,5 +874,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

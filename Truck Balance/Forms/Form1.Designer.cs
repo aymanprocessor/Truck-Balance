@@ -52,7 +52,7 @@
             // 
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroTile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.metroTile1.BackColor = System.Drawing.Color.Teal;
             this.metroTile1.Enabled = false;
             this.metroTile1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroTile1.Location = new System.Drawing.Point(34, 423);
@@ -69,17 +69,16 @@
             this.metroTile1.UseCustomForeColor = true;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
-            this.metroTile1.Visible = false;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.metroTile2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroTile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.metroTile2.Enabled = false;
             this.metroTile2.ForeColor = System.Drawing.Color.Blue;
-            this.metroTile2.Location = new System.Drawing.Point(352, 510);
+            this.metroTile2.Location = new System.Drawing.Point(385, 510);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(145, 75);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Green;
@@ -94,7 +93,6 @@
             this.metroTile2.UseCustomForeColor = true;
             this.metroTile2.UseSelectable = true;
             this.metroTile2.UseTileImage = true;
-            this.metroTile2.Visible = false;
             this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile3
@@ -103,7 +101,7 @@
             this.metroTile3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroTile3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.metroTile3.ForeColor = System.Drawing.Color.Blue;
-            this.metroTile3.Location = new System.Drawing.Point(843, 510);
+            this.metroTile3.Location = new System.Drawing.Point(927, 510);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(145, 75);
             this.metroTile3.TabIndex = 3;
@@ -232,7 +230,7 @@
             this.metroTile9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroTile9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.metroTile9.ForeColor = System.Drawing.Color.Blue;
-            this.metroTile9.Location = new System.Drawing.Point(654, 510);
+            this.metroTile9.Location = new System.Drawing.Point(695, 510);
             this.metroTile9.Name = "metroTile9";
             this.metroTile9.Size = new System.Drawing.Size(145, 75);
             this.metroTile9.Style = MetroFramework.MetroColorStyle.Black;
@@ -255,7 +253,7 @@
             this.metroTile10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroTile10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.metroTile10.ForeColor = System.Drawing.Color.Blue;
-            this.metroTile10.Location = new System.Drawing.Point(503, 510);
+            this.metroTile10.Location = new System.Drawing.Point(540, 510);
             this.metroTile10.Name = "metroTile10";
             this.metroTile10.Size = new System.Drawing.Size(145, 75);
             this.metroTile10.Style = MetroFramework.MetroColorStyle.White;
@@ -279,7 +277,7 @@
             this.button1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(593, 154);
+            this.button1.Location = new System.Drawing.Point(635, 154);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10);
             this.button1.Size = new System.Drawing.Size(324, 278);
@@ -298,7 +296,7 @@
             this.button2.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(241, 154);
+            this.button2.Location = new System.Drawing.Point(283, 154);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10);
             this.button2.Size = new System.Drawing.Size(324, 278);
@@ -315,18 +313,18 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(382, 9);
+            this.label1.Location = new System.Drawing.Point(416, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(393, 56);
             this.label1.TabIndex = 5;
-            this.label1.Text = "شركة الالومنيوم العربية";
+            this.label1.Text = "شركة الألومنيوم العربية";
             // 
             // lblDate
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDate.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Crimson;
-            this.lblDate.Location = new System.Drawing.Point(314, 78);
+            this.lblDate.Location = new System.Drawing.Point(348, 79);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDate.Size = new System.Drawing.Size(529, 56);
@@ -342,7 +340,7 @@
             // 
             this.metroTile11.ActiveControl = null;
             this.metroTile11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroTile11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroTile11.BackColor = System.Drawing.Color.Teal;
             this.metroTile11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroTile11.Location = new System.Drawing.Point(34, 510);
             this.metroTile11.Name = "metroTile11";
@@ -365,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1000, 615);
+            this.ClientSize = new System.Drawing.Size(1084, 615);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -387,7 +385,7 @@
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "شركة الالومنيوم العربية";
+            this.Text = "ادارة نظم المعلومات";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
