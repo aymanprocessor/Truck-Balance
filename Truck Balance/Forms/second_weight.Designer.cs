@@ -193,7 +193,7 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "كجم";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label18.Click += new System.EventHandler(this.label18_Click);
+         
             // 
             // lblTime
             // 
@@ -240,7 +240,7 @@
             this.lblCarWeight.Size = new System.Drawing.Size(185, 26);
             this.lblCarWeight.TabIndex = 0;
             this.lblCarWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCarWeight.Click += new System.EventHandler(this.lblCarWeight_Click);
+      
             // 
             // label15
             // 
