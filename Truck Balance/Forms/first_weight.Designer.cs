@@ -390,11 +390,11 @@
             this.label12.BackColor = System.Drawing.Color.Black;
             this.label12.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Lime;
-            this.label12.Location = new System.Drawing.Point(6, 5);
+            this.label12.Location = new System.Drawing.Point(0, 5);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(130, 63);
+            this.label12.Size = new System.Drawing.Size(136, 63);
             this.label12.TabIndex = 0;
             this.label12.Text = "000";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,12 +428,12 @@
             this.groupBox2.Controls.Add(this.lblDate1);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox2.Location = new System.Drawing.Point(211, 281);
+            this.groupBox2.Location = new System.Drawing.Point(216, 281);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(390, 188);
+            this.groupBox2.Size = new System.Drawing.Size(385, 188);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "بيانات الوزن";
@@ -457,7 +457,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Purple;
-            this.label11.Location = new System.Drawing.Point(252, 38);
+            this.label11.Location = new System.Drawing.Point(249, 38);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -473,7 +473,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Purple;
-            this.label16.Location = new System.Drawing.Point(252, 136);
+            this.label16.Location = new System.Drawing.Point(249, 136);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -488,7 +488,7 @@
             this.lblTime1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTime1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTime1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime1.Location = new System.Drawing.Point(68, 87);
+            this.lblTime1.Location = new System.Drawing.Point(63, 87);
             this.lblTime1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTime1.Name = "lblTime1";
             this.lblTime1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -503,7 +503,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Purple;
-            this.label15.Location = new System.Drawing.Point(252, 87);
+            this.label15.Location = new System.Drawing.Point(249, 87);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -518,7 +518,7 @@
             this.lblCarWeight1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCarWeight1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCarWeight1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarWeight1.Location = new System.Drawing.Point(113, 38);
+            this.lblCarWeight1.Location = new System.Drawing.Point(108, 38);
             this.lblCarWeight1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCarWeight1.Name = "lblCarWeight1";
             this.lblCarWeight1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -532,7 +532,7 @@
             this.lblDate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDate1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDate1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate1.Location = new System.Drawing.Point(68, 136);
+            this.lblDate1.Location = new System.Drawing.Point(63, 136);
             this.lblDate1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate1.Name = "lblDate1";
             this.lblDate1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -563,7 +563,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(90, 63);
+            this.label9.Size = new System.Drawing.Size(90, 64);
             this.label9.TabIndex = 0;
             this.label9.Text = ".Kg";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -670,7 +670,7 @@
             this.lblWeightReading.Location = new System.Drawing.Point(717, 4);
             this.lblWeightReading.Multiline = true;
             this.lblWeightReading.Name = "lblWeightReading";
-            this.lblWeightReading.Size = new System.Drawing.Size(295, 63);
+            this.lblWeightReading.Size = new System.Drawing.Size(295, 64);
             this.lblWeightReading.TabIndex = 18;
             this.lblWeightReading.Text = "00000";
             this.lblWeightReading.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

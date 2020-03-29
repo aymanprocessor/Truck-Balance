@@ -91,15 +91,22 @@ namespace Truck_Balance.Forms
             }
         }
 
-        private void c_ControlChanged(object sender, EventArgs e)
+        private void first_weight_FormClosing(object sender, FormClosingEventArgs e)
         {
+            {
+                DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    Main main = new Main();
+                    main.Show();
+                    this.Hide();
+                    //disconnect();
+                    serial.Disconnect();
+                }
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
         {
         }
 
@@ -121,9 +128,191 @@ namespace Truck_Balance.Forms
             //prevWieght.Show();
             serial.Disconnect();
             second_weight second_Weight = new second_weight();
-            second_Weight.Show();
             second_Weight.loadDataById(Convert.ToInt32(label12.Text));
+            second_Weight.Show();
             this.Hide();
+        }
+
+        private void btnRecordWeight_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void btnRecordWeight1_Click(object sender, EventArgs e)
+        {
+            record1();
+            btnRecordWeight.BackColor = Color.Lime;
+            btnRecordWeight.ForeColor = Color.DarkGreen;
+        }
+
+        private void btnNewWeight_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("هل تريد وزنة جديدة؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                string sql = "select max(id) from Wieghts";
+                using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+                {
+                    using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                    {
+                        connection.Open();
+                        var result = command.ExecuteScalar();
+                        if (result.Equals(DBNull.Value))
+                        {
+                            label12.Text = "1";
+                        }
+                        else
+                        {
+                            label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
+                        }
+                    }
+                }
+
+                cbCarType.SelectedIndex = -1;
+                cbCustomerName.SelectedIndex = -1;
+                cbDriverName.SelectedIndex = -1;
+                // cbGoodType.SelectedIndex = -1;
+                cbProduct.SelectedIndex = -1;
+                rbExport.Checked = false;
+                rbImport.Checked = false;
+
+                tbCarNumber.Text = "";
+                tbGoodNumber.Text = "";
+                tbNote.Text = "";
+                lblCarWeight1.Text = "";
+                //lblCarWeight2.Text = "";
+                lblDate1.Text = "";
+                //lblDate2.Text = "";
+                lblTime1.Text = "";
+                //lblTime2.Text = "";
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            goods g = new goods();
+            DialogResult dialogResult = g.ShowDialog();
+            if (dialogResult == DialogResult.Cancel)
+            {
+                loadintocombo(goodsPath, cbProduct);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            customers c = new customers();
+
+            DialogResult dialogResult = c.ShowDialog();
+            if (dialogResult == DialogResult.Cancel)
+            {
+                loadIntoComboFromDatabse(cbCustomerName, "select id,name from Customers");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            drivers d = new drivers();
+            DialogResult dialogResult = d.ShowDialog();
+            if (dialogResult == DialogResult.Cancel)
+            {
+                loadintocombo(driversPath, cbDriverName);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            trucks t = new trucks();
+
+            DialogResult dialogResult = t.ShowDialog();
+            if (dialogResult == DialogResult.Cancel)
+            {
+                loadintocombo(trucksPath, cbCarType);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        /* private string finalWieght()
+         {
+             int wieght1 = !lblCarWeight1.Text.Equals("") ? Convert.ToInt32(lblCarWeight1.Text.All(char.IsDigit) ? lblCarWeight1.Text : "0"):0;
+            // int wieght2 = !lblCarWeight2.Text.Equals("") ? Convert.ToInt32(lblCarWeight2.Text.All(char.IsDigit) ? lblCarWeight2.Text : "0"):0;
+             if (wieght1 > 0 && wieght2 > 0)
+             {
+                 if (wieght1 < wieght2)
+                 {
+                     rbExport.Checked = true;
+                     rbImport.Checked = false;
+                     lblFinalWieght.Text = String.Format("الوزن الصافي {0} كجم", (wieght2 - wieght1).ToString());
+                     return (wieght2 - wieght1).ToString();
+                 }
+                 else if (wieght1 > wieght2)
+                 {
+                     rbImport.Checked = true;
+                     rbExport.Checked = false;
+                     lblFinalWieght.Text = String.Format("الوزن الصافي {0} كجم", (wieght1 - wieght2).ToString());
+                     return (wieght1 - wieght2).ToString();
+                 }
+             }
+
+             return "0";
+         }*/
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+            btnSave.Enabled = true;
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+            btnSave.Enabled = true;
+        }
+
+        private void loadDataById1(int id)
+        {
+            string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
+            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            {
+                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                {
+                    connection.Open();
+                    SqlCeDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        cbProduct.Text = reader["product"].ToString().Trim();
+                        cbDriverName.Text = reader["driverName"].ToString().Trim();
+                        cbCarType.Text = reader["truckType"].ToString().Trim();
+                        tbCarNumber.Text = reader["truckNumber"].ToString().Trim();
+                        tbGoodNumber.Text = reader["containerNumber"].ToString().Trim();
+                    }
+                }
+            }
+        }
+
+        private void lblWeightReading_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tbCarNumber_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void c_ControlChanged(object sender, EventArgs e)
+        {
         }
 
         private void loadintocombo(String path, ComboBox cb)
@@ -176,37 +365,6 @@ namespace Truck_Balance.Forms
             }
         }
 
-        private void first_weight_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            {
-                // DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //if (res == DialogResult.Yes)
-                //{
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-                //disconnect();
-                serial.Disconnect();
-                //}
-            }
-        }
-
-        private void btnRecordWeight_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Save();
-        }
-
-        private void btnRecordWeight1_Click(object sender, EventArgs e)
-        {
-            record1();
-            btnRecordWeight.BackColor = Color.Lime;
-            btnRecordWeight.ForeColor = Color.DarkGreen;
-        }
-
         private void record1()
         {
             if (Convert.ToInt64(lblWeightReading.Text) > 0)
@@ -243,74 +401,6 @@ namespace Truck_Balance.Forms
             //}
 
             //lblWeightReading.Text = new Random().Next(500, 1000).ToString();
-        }
-
-        /* private string finalWieght()
-         {
-             int wieght1 = !lblCarWeight1.Text.Equals("") ? Convert.ToInt32(lblCarWeight1.Text.All(char.IsDigit) ? lblCarWeight1.Text : "0"):0;
-            // int wieght2 = !lblCarWeight2.Text.Equals("") ? Convert.ToInt32(lblCarWeight2.Text.All(char.IsDigit) ? lblCarWeight2.Text : "0"):0;
-             if (wieght1 > 0 && wieght2 > 0)
-             {
-                 if (wieght1 < wieght2)
-                 {
-                     rbExport.Checked = true;
-                     rbImport.Checked = false;
-                     lblFinalWieght.Text = String.Format("الوزن الصافي {0} كجم", (wieght2 - wieght1).ToString());
-                     return (wieght2 - wieght1).ToString();
-                 }
-                 else if (wieght1 > wieght2)
-                 {
-                     rbImport.Checked = true;
-                     rbExport.Checked = false;
-                     lblFinalWieght.Text = String.Format("الوزن الصافي {0} كجم", (wieght1 - wieght2).ToString());
-                     return (wieght1 - wieght2).ToString();
-                 }
-             }
-
-             return "0";
-         }*/
-
-        private void btnNewWeight_Click(object sender, EventArgs e)
-        {
-            DialogResult res = MessageBox.Show("هل تريد وزنة جديدة؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
-            {
-                string sql = "select max(id) from Wieghts";
-                using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
-                {
-                    using (SqlCeCommand command = new SqlCeCommand(sql, connection))
-                    {
-                        connection.Open();
-                        var result = command.ExecuteScalar();
-                        if (result.Equals(DBNull.Value))
-                        {
-                            label12.Text = "1";
-                        }
-                        else
-                        {
-                            label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
-                        }
-                    }
-                }
-
-                cbCarType.SelectedIndex = -1;
-                cbCustomerName.SelectedIndex = -1;
-                cbDriverName.SelectedIndex = -1;
-                // cbGoodType.SelectedIndex = -1;
-                cbProduct.SelectedIndex = -1;
-                rbExport.Checked = false;
-                rbImport.Checked = false;
-
-                tbCarNumber.Text = "";
-                tbGoodNumber.Text = "";
-                tbNote.Text = "";
-                lblCarWeight1.Text = "";
-                //lblCarWeight2.Text = "";
-                lblDate1.Text = "";
-                //lblDate2.Text = "";
-                lblTime1.Text = "";
-                //lblTime2.Text = "";
-            }
         }
 
         public void loadDataById(int id)
@@ -492,9 +582,10 @@ namespace Truck_Balance.Forms
 
                             if (res > 0)
                             {
-                                //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                // MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 btnSecondWeight.Enabled = true;
                                 btnNewWeight.Enabled = true;
+                                //tnSave.Enabled = false;
                                 isSaved = true;
                             }
                         }
@@ -567,9 +658,10 @@ namespace Truck_Balance.Forms
 
                             if (res > 0)
                             {
-                                //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 btnNewWeight.Enabled = true;
                                 btnSecondWeight.Enabled = true;
+                                btnSave.Enabled = true;
                                 isSaved = true;
                             }
                         }
@@ -587,65 +679,6 @@ namespace Truck_Balance.Forms
                     return;
                 }
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-              
-                
-
-            }
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-            btnSave.Enabled = true;
-        }
-
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-            btnSave.Enabled = true;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            goods g = new goods();
-            DialogResult dialogResult = g.ShowDialog();
-            if (dialogResult == DialogResult.Cancel)
-            {
-                loadintocombo(goodsPath, cbProduct);
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            customers c = new customers();
-
-            DialogResult dialogResult = c.ShowDialog();
-            if (dialogResult == DialogResult.Cancel)
-            {
-                loadIntoComboFromDatabse(cbCustomerName, "select id,name from Customers");
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            drivers d = new drivers();
-            DialogResult dialogResult = d.ShowDialog();
-            if (dialogResult == DialogResult.Cancel)
-            {
-                loadintocombo(driversPath, cbDriverName);
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            trucks t = new trucks();
-
-            DialogResult dialogResult = t.ShowDialog();
-            if (dialogResult == DialogResult.Cancel)
-            {
-                loadintocombo(trucksPath, cbCarType);
             }
         }
 
@@ -659,40 +692,6 @@ namespace Truck_Balance.Forms
                     command.ExecuteNonQuery();
                 }
             }
-        }
-
-        private void loadDataById1(int id)
-        {
-            string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
-            {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
-                {
-                    connection.Open();
-                    SqlCeDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        cbProduct.Text = reader["product"].ToString().Trim();
-                        cbDriverName.Text = reader["driverName"].ToString().Trim();
-                        cbCarType.Text = reader["truckType"].ToString().Trim();
-                        tbCarNumber.Text = reader["truckNumber"].ToString().Trim();
-                        tbGoodNumber.Text = reader["containerNumber"].ToString().Trim();
-                    }
-                }
-            }
-        }
-
-        private void lblWeightReading_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tbCarNumber_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }

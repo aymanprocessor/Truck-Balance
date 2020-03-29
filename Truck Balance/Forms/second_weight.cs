@@ -77,6 +77,125 @@ namespace Truck_Balance.Forms
             }
         }
 
+        private void second_weight_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                sp.Disconnect();
+                Main main = new Main();
+                main.Show();
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            {
+                if (isSaved)
+                {
+                    DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        sp.Disconnect();
+                        Main main = new Main();
+                        main.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        sp.Disconnect();
+                        Main main = new Main();
+                        main.Show();
+                        this.Hide();
+                    }
+                }
+            }
+        }
+
+        private void btnSecondWeight_Click(object sender, EventArgs e)
+        {
+            first_weight first_Weight = new first_weight();
+            first_Weight.Show();
+            this.Hide();
+        }
+
+        private void btnRecordWeight_Click(object sender, EventArgs e)
+        {
+            record2();
+            finalWieght();
+            btnRecordWeight.BackColor = Color.Lime;
+            btnRecordWeight.ForeColor = Color.DarkGreen;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            ToWord word = new ToWord(Convert.ToDecimal(finalWieght()), new CurrencyInfo(CurrencyInfo.Currencies.Kilo));
+            ReportParameterCollection reportParameter = new ReportParameterCollection();
+            reportParameter.Add(new ReportParameter("toArabic", word.ConvertToArabic()));
+            reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
+            LocalReport localReport = new LocalReport();
+            localReport.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+            Data_Access data_Access = new Data_Access(Convert.ToInt32(lblCode.Text));
+            ReportDataSource rds = new ReportDataSource("Wieghts", data_Access.getReportData());
+            localReport.DataSources.Clear();
+            localReport.DataSources.Add(rds);
+            localReport.SetParameters(reportParameter);
+            localReport.PrintToPrinter();
+        }
+
+        private void btnNewWeight_Click(object sender, EventArgs e)
+        {
+            Hide();
+            sp.Disconnect();
+            new first_weight().Show();
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            Save();
+            ToWord word = new ToWord(Convert.ToDecimal(finalWieght()), new CurrencyInfo(CurrencyInfo.Currencies.Kilo));
+
+            ReportParameterCollection reportParameter = new ReportParameterCollection();
+            reportParameter.Add(new ReportParameter("toArabic", word.ConvertToArabic()));
+            reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
+            Report report = new Report(Convert.ToInt32(lblCode.Text), reportParameter);
+            report.Show();
+            Hide();
+        }
+
+        private void btnSave_as_fw_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void second_weight_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible == false)
+            {
+                sp.Disconnect();
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+        }
+
         private void loadIntoComboFromDatabse(ComboBox cb, string sql)
         {
             try
@@ -116,56 +235,6 @@ namespace Truck_Balance.Forms
                     }
                 }
             }
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            {
-                if (isSaved)
-                {
-                    sp.Disconnect();
-                    Main main = new Main();
-                    main.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (res == DialogResult.Yes)
-                    {
-                        sp.Disconnect();
-                        Main main = new Main();
-                        main.Show();
-                        this.Hide();
-                    }
-                }
-            }
-        }
-
-        private void btnSecondWeight_Click(object sender, EventArgs e)
-        {
-            first_weight first_Weight = new first_weight();
-            first_Weight.Show();
-            this.Hide();
-        }
-
-        private void second_weight_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //if (res == DialogResult.Yes)
-            //{
-            sp.Disconnect();
-            Main main = new Main();
-            main.Show();
-            //}
-        }
-
-        private void btnRecordWeight_Click(object sender, EventArgs e)
-        {
-            record2();
-            finalWieght();
-            btnRecordWeight.BackColor = Color.Lime;
-            btnRecordWeight.ForeColor = Color.DarkGreen;
         }
 
         private void record2()
@@ -252,9 +321,10 @@ namespace Truck_Balance.Forms
 
                         if (res > 0)
                         {
-                            //MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
                             btnPrint.Enabled = true;
                             btnPreview.Enabled = true;
+                            btnSave.Enabled = false;
                             isSaved = true;
                         }
                     }
@@ -413,71 +483,6 @@ namespace Truck_Balance.Forms
         public void Dis()
         {
             sp.Disconnect();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Save();
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            ToWord word = new ToWord(Convert.ToDecimal(finalWieght()), new CurrencyInfo(CurrencyInfo.Currencies.Kilo));
-            ReportParameterCollection reportParameter = new ReportParameterCollection();
-            reportParameter.Add(new ReportParameter("toArabic", word.ConvertToArabic()));
-            reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
-            LocalReport localReport = new LocalReport();
-            localReport.ReportPath = Application.StartupPath + "\\Report1.rdlc";
-            Data_Access data_Access = new Data_Access(Convert.ToInt32(lblCode.Text));
-            ReportDataSource rds = new ReportDataSource("Wieghts", data_Access.getReportData());
-            localReport.DataSources.Clear();
-            localReport.DataSources.Add(rds);
-            localReport.SetParameters(reportParameter);
-            localReport.PrintToPrinter();
-        }
-
-        private void btnNewWeight_Click(object sender, EventArgs e)
-        {
-            Hide();
-            sp.Disconnect();
-            new first_weight().Show();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void second_weight_VisibleChanged(object sender, EventArgs e)
-        {
-            if (this.Visible == false)
-            {
-                sp.Disconnect();
-            }
-        }
-
-        private void btnPreview_Click(object sender, EventArgs e)
-        {
-            Save();
-            ToWord word = new ToWord(Convert.ToDecimal(finalWieght()), new CurrencyInfo(CurrencyInfo.Currencies.Kilo));
-
-            ReportParameterCollection reportParameter = new ReportParameterCollection();
-            reportParameter.Add(new ReportParameter("toArabic", word.ConvertToArabic()));
-            reportParameter.Add(new ReportParameter("User", Properties.Settings.Default.username));
-            Report report = new Report(Convert.ToInt32(lblCode.Text), reportParameter);
-            report.Show();
-            Hide();
-        }
-
-        private void btnSave_as_fw_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
         }
     }
 }

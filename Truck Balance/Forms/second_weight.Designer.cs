@@ -193,7 +193,6 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "كجم";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-         
             // 
             // lblTime
             // 
@@ -240,7 +239,6 @@
             this.lblCarWeight.Size = new System.Drawing.Size(185, 26);
             this.lblCarWeight.TabIndex = 0;
             this.lblCarWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      
             // 
             // label15
             // 
@@ -773,7 +771,7 @@
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label17.Size = new System.Drawing.Size(90, 63);
+            this.label17.Size = new System.Drawing.Size(95, 63);
             this.label17.TabIndex = 20;
             this.label17.Text = ".Kg";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
