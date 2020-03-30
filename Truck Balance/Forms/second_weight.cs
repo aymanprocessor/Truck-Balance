@@ -437,6 +437,10 @@ namespace Truck_Balance.Forms
 
         public void loadDataById(int id)
         {
+            if (com == null)
+            {
+                com = new common();
+            }
             string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
             using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
             {

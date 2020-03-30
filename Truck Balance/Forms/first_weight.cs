@@ -56,14 +56,6 @@ namespace Truck_Balance.Forms
 
             serial.Connect();
 
-            foreach (Control c in this.Controls)
-            {
-                if (c is TextBox)
-                {
-                    ((TextBox)c).TextChanged += new EventHandler(c_ControlChanged);
-                }
-            }
-
             //lblWeightReading.Text = new Random().Next(500, 1000).ToString();
             loadintocombo(driversPath, cbDriverName);
             loadintocombo(goodsPath, cbProduct);
@@ -71,24 +63,27 @@ namespace Truck_Balance.Forms
             //loadintocombo(productPath, cbProduct);
 
             loadIntoComboFromDatabse(cbCustomerName, "select id,name from Customers");
-            string sql = "select max(id) from Wieghts";
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
-            {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
-                {
-                    connection.Open();
-                    var result = command.ExecuteScalar();
-                    if (result.Equals(DBNull.Value))
-                    {
-                        label12.Text = "1";
-                        resetId();
-                    }
-                    else
-                    {
-                        label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
-                    }
-                }
-            }
+            //string sql = "select max(id) from Wieghts";
+            //string sql = "select @@IDENTITY";
+            //using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            //{
+            //    using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+            //    {
+            //        connection.Open();
+            //        command.Transaction = connection.BeginTransaction();
+            //        var result = command.ExecuteScalar();
+            //        MessageBox.Show(result.ToString());
+            //        if (result.Equals(DBNull.Value))
+            //        {
+            //            label12.Text = "1";
+            //            resetId();
+            //        }
+            //        else
+            //        {
+            //            label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
+            //        }
+            //    }
+            //}
         }
 
         private void first_weight_FormClosing(object sender, FormClosingEventArgs e)
@@ -128,8 +123,8 @@ namespace Truck_Balance.Forms
             //prevWieght.Show();
             serial.Disconnect();
             second_weight second_Weight = new second_weight();
-            second_Weight.loadDataById(Convert.ToInt32(label12.Text));
             second_Weight.Show();
+            second_Weight.loadDataById(Convert.ToInt32(label12.Text));
             this.Hide();
         }
 
@@ -655,7 +650,8 @@ namespace Truck_Balance.Forms
                             conn.Open();
 
                             int res = cmd.ExecuteNonQuery();
-
+                            cmd.CommandText = "select @@IDENTITY";
+                            label12.Text = cmd.ExecuteScalar().ToString();
                             if (res > 0)
                             {
                                 MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
