@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SqlServerCe;
 using System.Drawing;
 using System.Globalization;
@@ -59,9 +60,9 @@ namespace Truck_Balance.Forms
 
             loadIntoComboFromDatabse(cbCustomerName, "select id,name from Customers");
             string sql = "select max(id) from Wieghts";
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     connection.Open();
                     var result = command.ExecuteScalar();
@@ -174,6 +175,10 @@ namespace Truck_Balance.Forms
 
         private void btnSave_as_fw_Click(object sender, EventArgs e)
         {
+            first_weight first_Weight = new first_weight(this, cbDriverName.Text, cbProduct.Text, cbCarType.Text, lblCarWeight.Text, tbCarNumber.Text);
+            sp.Disconnect();
+            first_Weight.Show();
+            Hide();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -200,12 +205,12 @@ namespace Truck_Balance.Forms
         {
             try
             {
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
-                        SqlCeDataReader reader = cmd.ExecuteReader();
+                        SqlDataReader reader = cmd.ExecuteReader();
 
                         while (reader.Read())
                         {
@@ -260,9 +265,9 @@ namespace Truck_Balance.Forms
             {
                 string sql2 = string.Format("select count(*) from Wieghts where id={0}", Convert.ToInt32(lblCode.Text));
                 int count;
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql2, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql2, conn))
                     {
                         conn.Open();
 
@@ -289,18 +294,18 @@ namespace Truck_Balance.Forms
             "WHERE id = {0}", Convert.ToInt16(lblCode.Text));
                 int get_custId;
                 string sql1 = string.Format("select id from Customers where name=N'{0}'", cbCustomerName.Text);
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql1, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql1, conn))
                     {
                         conn.Open();
 
                         get_custId = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@customerId", get_custId);
                         cmd.Parameters.AddWithValue("@product", cbProduct.Text.Trim());
@@ -325,6 +330,7 @@ namespace Truck_Balance.Forms
                             btnPrint.Enabled = true;
                             btnPreview.Enabled = true;
                             btnSave.Enabled = false;
+                            btnSave_as_fw.Enabled = true;
                             isSaved = true;
                         }
                     }
@@ -362,18 +368,18 @@ namespace Truck_Balance.Forms
                 //")";
                 //    int get_custId;
                 //    string sql1 = string.Format("select id from Customers where name=N'{0}'", cbCustomerName.Text);
-                //    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                //    using (SqlConnection conn = new SqlConnection(com.connstr()))
                 //    {
-                //        using (SqlCeCommand cmd = new SqlCeCommand(sql1, conn))
+                //        using (SqlCommand cmd = new SqlCommand(sql1, conn))
                 //        {
                 //            conn.Open();
 
                 //            get_custId = Convert.ToInt16(cmd.ExecuteScalar());
                 //        }
                 //    }
-                //    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                //    using (SqlConnection conn = new SqlConnection(com.connstr()))
                 //    {
-                //        using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                //        using (SqlCommand cmd = new SqlCommand(sql, conn))
                 //        {
                 //            cmd.Parameters.AddWithValue("@customerId", get_custId);
                 //            cmd.Parameters.AddWithValue("@product", cbProduct.Text);
@@ -442,12 +448,12 @@ namespace Truck_Balance.Forms
                 com = new common();
             }
             string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     connection.Open();
-                    SqlCeDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {

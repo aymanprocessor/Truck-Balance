@@ -299,13 +299,13 @@
             this.lblCarWieght2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarWieght2.BackColor = System.Drawing.Color.Transparent;
             this.lblCarWieght2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarWieght2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCarWieght2.Location = new System.Drawing.Point(670, 10);
+            this.lblCarWieght2.ForeColor = System.Drawing.Color.Red;
+            this.lblCarWieght2.Location = new System.Drawing.Point(621, 10);
             this.lblCarWieght2.Name = "lblCarWieght2";
             this.lblCarWieght2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarWieght2.Size = new System.Drawing.Size(112, 36);
+            this.lblCarWieght2.Size = new System.Drawing.Size(158, 36);
             this.lblCarWieght2.TabIndex = 0;
-            this.lblCarWieght2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCarWieght2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
@@ -656,10 +656,10 @@
             this.lblFinalWieght.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFinalWieght.BackColor = System.Drawing.Color.Transparent;
             this.lblFinalWieght.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinalWieght.Location = new System.Drawing.Point(344, 10);
+            this.lblFinalWieght.Location = new System.Drawing.Point(316, 10);
             this.lblFinalWieght.Name = "lblFinalWieght";
             this.lblFinalWieght.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblFinalWieght.Size = new System.Drawing.Size(252, 36);
+            this.lblFinalWieght.Size = new System.Drawing.Size(299, 36);
             this.lblFinalWieght.TabIndex = 0;
             this.lblFinalWieght.Text = "الوزن الصافي 0 كجم";
             this.lblFinalWieght.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Truck_Balance
 {
-    class common
+    internal class common
     {
-
         public string connstr()
         {
-          
-            return string.Format("Data Source={0}",Properties.Settings.Default.dbpath);
-        } 
+            return Properties.Settings.Default.dbConnectionString;
+        }
     }
 }

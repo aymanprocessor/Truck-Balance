@@ -33,10 +33,33 @@ namespace Truck_Balance.Forms
         private string id_val;
         private SerialPortReader serial;
         private bool isSaved = false;
+        private second_weight second_Weight;
 
         public first_weight()
         {
             InitializeComponent();
+        }
+
+        public first_weight(second_weight _second_Weight, string driverName, string prodect, string carType, string Wieght, string carNumber)
+        {
+            InitializeComponent();
+            second_Weight = _second_Weight;
+
+            cbDriverName.Text = driverName;
+            cbProduct.Text = prodect;
+            cbCarType.Text = carType;
+            lblCarWeight1.Text = Wieght;
+            tbCarNumber.Text = carNumber;
+
+            lblDate1.Text = DateTime.Now.ToString("hh:mm tt");
+            lblTime1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            cbCustomerName.Select();
+
+            cbCustomerName.SelectedIndexChanged += (sebder, e) =>
+            {
+                btnSave.Enabled = true;
+            };
         }
 
         public void first_weight_Load(object sender, EventArgs e)
@@ -64,26 +87,26 @@ namespace Truck_Balance.Forms
 
             loadIntoComboFromDatabse(cbCustomerName, "select id,name from Customers");
             //string sql = "select max(id) from Wieghts";
-            //string sql = "select @@IDENTITY";
-            //using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
-            //{
-            //    using (SqlCeCommand command = new SqlCeCommand(sql, connection))
-            //    {
-            //        connection.Open();
-            //        command.Transaction = connection.BeginTransaction();
-            //        var result = command.ExecuteScalar();
-            //        MessageBox.Show(result.ToString());
-            //        if (result.Equals(DBNull.Value))
-            //        {
-            //            label12.Text = "1";
-            //            resetId();
-            //        }
-            //        else
-            //        {
-            //            label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
-            //        }
-            //    }
-            //}
+            string sql = "select IDENT_CURRENT('Wieghts')";
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
+            {
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+
+                    var result = command.ExecuteScalar();
+                    MessageBox.Show(result.ToString());
+                    if (result.Equals(DBNull.Value))
+                    {
+                        label12.Text = "1";
+                        resetId();
+                    }
+                    else
+                    {
+                        label12.Text = (Convert.ToInt32(command.ExecuteScalar()) + 1).ToString();
+                    }
+                }
+            }
         }
 
         private void first_weight_FormClosing(object sender, FormClosingEventArgs e)
@@ -150,9 +173,9 @@ namespace Truck_Balance.Forms
             if (res == DialogResult.Yes)
             {
                 string sql = "select max(id) from Wieghts";
-                using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+                using (SqlConnection connection = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         connection.Open();
                         var result = command.ExecuteScalar();
@@ -275,12 +298,12 @@ namespace Truck_Balance.Forms
         private void loadDataById1(int id)
         {
             string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     connection.Open();
-                    SqlCeDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -340,12 +363,12 @@ namespace Truck_Balance.Forms
                     cb.Items.Clear();
                 }
 
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
-                        SqlCeDataReader reader = cmd.ExecuteReader();
+                        SqlDataReader reader = cmd.ExecuteReader();
 
                         while (reader.Read())
                         {
@@ -401,12 +424,12 @@ namespace Truck_Balance.Forms
         public void loadDataById(int id)
         {
             string sql = string.Format("select * from Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id where Wieghts.id = {0}; ", id);
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand command = new SqlCeCommand(sql, connection))
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     connection.Open();
-                    SqlCeDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -516,9 +539,9 @@ namespace Truck_Balance.Forms
 
                 string sql2 = string.Format("select count(*) from Wieghts where id={0}", label12.Text);
                 int count;
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql2, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql2, conn))
                     {
                         conn.Open();
 
@@ -544,18 +567,18 @@ namespace Truck_Balance.Forms
                 "WHERE id = {0}", Convert.ToInt32(label12.Text));
                     int get_custId;
                     string sql1 = string.Format("select id from Customers where name=N'{0}'", cbCustomerName.Text);
-                    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                    using (SqlConnection conn = new SqlConnection(com.connstr()))
                     {
-                        using (SqlCeCommand cmd = new SqlCeCommand(sql1, conn))
+                        using (SqlCommand cmd = new SqlCommand(sql1, conn))
                         {
                             conn.Open();
 
                             get_custId = Convert.ToInt16(cmd.ExecuteScalar());
                         }
                     }
-                    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                    using (SqlConnection conn = new SqlConnection(com.connstr()))
                     {
-                        using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
                         {
                             cmd.Parameters.AddWithValue("@customerId", get_custId);
                             cmd.Parameters.AddWithValue("@product", cbProduct.Text.Trim());
@@ -620,18 +643,18 @@ namespace Truck_Balance.Forms
                 ")";
                     int get_custId;
                     string sql1 = string.Format("select id from Customers where name=N'{0}'", cbCustomerName.Text);
-                    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                    using (SqlConnection conn = new SqlConnection(com.connstr()))
                     {
-                        using (SqlCeCommand cmd = new SqlCeCommand(sql1, conn))
+                        using (SqlCommand cmd = new SqlCommand(sql1, conn))
                         {
                             conn.Open();
 
                             get_custId = Convert.ToInt32(cmd.ExecuteScalar());
                         }
                     }
-                    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                    using (SqlConnection conn = new SqlConnection(com.connstr()))
                     {
-                        using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
                         {
                             cmd.Parameters.AddWithValue("@customerId", get_custId);
                             cmd.Parameters.AddWithValue("@product", cbProduct.Text.Trim());
@@ -680,9 +703,9 @@ namespace Truck_Balance.Forms
 
         private void resetId()
         {
-            using (SqlCeConnection connection = new SqlCeConnection(com.connstr()))
+            using (SqlConnection connection = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand command = new SqlCeCommand(" ALTER TABLE [Wieghts] ALTER COLUMN [Id] IDENTITY (1,1) ", connection))
+                using (SqlCommand command = new SqlCommand(" ALTER TABLE [Wieghts] ALTER COLUMN [Id] IDENTITY (1,1) ", connection))
                 {
                     connection.Open();
                     command.ExecuteNonQuery();

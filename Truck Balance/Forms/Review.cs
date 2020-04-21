@@ -123,9 +123,9 @@ namespace Truck_Balance.Forms
                 try
                 {
                     string sql = string.Format("DELETE FROM Wieghts WHERE id = {0};", Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value));
-                    using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                    using (SqlConnection conn = new SqlConnection(com.connstr()))
                     {
-                        using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                        using (SqlCommand cmd = new SqlCommand(sql, conn))
                         {
                             conn.Open();
                             cmd.ExecuteNonQuery();
@@ -165,9 +165,9 @@ namespace Truck_Balance.Forms
                         "Wieghts.note as [ملاحظة]," +
                         "Wieghts.[user] as [القائم بالوزن] " +
                         "FROM Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id";
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
@@ -223,9 +223,9 @@ namespace Truck_Balance.Forms
                     "FROM Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id " +
                     "WHERE Wieghts.product != 'قطاعات الومنيوم' and Wieghts.date between CONVERT(datetime,@fromDate,101) and CONVERT(datetime,@toDate,101)";
                 }
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                     {
                         DataTable dt = new DataTable();
                         adapter.SelectCommand.Parameters.AddWithValue("@fromDate", fromDate.Value.ToShortDateString() + " 11:59 PM");

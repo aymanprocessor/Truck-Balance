@@ -41,9 +41,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = string.Format("SELECT Wieghts.Id as م,Wieghts.truckNumber as السيارة, Customers.name as  العميل, Wieghts.firstWieght as [الوزنة الاولى],Wieghts.date as التاريخ FROM Wieghts INNER JOIN Customers ON Wieghts.customerId = Customers.Id Where Wieghts.secondWieght IS NULL",String.Empty);
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                     {
                         conn.Open();
                         DataTable dt = new DataTable();

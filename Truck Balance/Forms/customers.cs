@@ -17,23 +17,21 @@ namespace Truck_Balance.Forms
     public partial class customers : Form
     {
         //string fileName = String.Format("data\\customers.txt", Environment.CurrentDirectory);
-        common com;
+        private common com;
+
         public customers()
         {
             InitializeComponent();
         }
 
-      
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (validate())
             {
                 string sql = "insert into Customers(name,address,government) VALUES(@name,@address,@government)";
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@name", tbName.Text);
                         cmd.Parameters.AddWithValue("@address", tbAddress.Text);
@@ -43,28 +41,24 @@ namespace Truck_Balance.Forms
 
                         if (result > 0)
                         {
-
                             load();
                         }
                         else
                         {
                             MessageBox.Show("خطأ");
                         }
-
                     }
                 }
             }
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int selectedRow = Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value);
-            string sql = string.Format("delete from Customers where id={0}",selectedRow);
-            using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+            string sql = string.Format("delete from Customers where id={0}", selectedRow);
+            using (SqlConnection conn = new SqlConnection(com.connstr()))
             {
-                using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     try
                     {
@@ -73,7 +67,6 @@ namespace Truck_Balance.Forms
 
                         if (result > 0)
                         {
-
                             load();
                         }
                         else
@@ -81,21 +74,16 @@ namespace Truck_Balance.Forms
                             MessageBox.Show("خطأ");
                         }
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
-                   
-
                 }
             }
-
         }
 
         private void customers_Load(object sender, EventArgs e)
         {
-
             com = new common();
             string[] government = {
                     "الإسماعيلية",
@@ -128,42 +116,35 @@ namespace Truck_Balance.Forms
             foreach (string i in government.ToList())
             {
                 cbGovernment.Items.Add(i);
-
             }
             load();
         }
 
-        void load()
+        private void load()
         {
             try
             {
                 string sql = "select id as م ,name as الاسم , address as العنوان , government as المحافظة from Customers";
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                     {
                         conn.Open();
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
                         dataGridView1.DataSource = dt;
-
-
-
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-           
         }
 
-        bool validate()
+        private bool validate()
         {
-
             if (tbName.Text == "")
             {
                 MessageBox.Show("من فضلك اكتب الاسم", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);

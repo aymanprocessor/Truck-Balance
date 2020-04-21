@@ -39,12 +39,12 @@ namespace Truck_Balance.Forms
         {
             try
             {
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
-                        SqlCeDataReader reader = cmd.ExecuteReader();
+                        SqlDataReader reader = cmd.ExecuteReader();
 
                         while (reader.Read())
                         {
@@ -64,9 +64,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = string.Format("select password from users where username =  N'{0}'", cbUser.Text.Trim());
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         var pass = cmd.ExecuteScalar();
@@ -105,7 +105,6 @@ namespace Truck_Balance.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

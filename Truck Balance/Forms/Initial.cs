@@ -19,7 +19,6 @@ namespace Truck_Balance
 
         private void Initial_Load(object sender, EventArgs e)
         {
-            sp = new SerialPortReader(this, lblWeightReading);
             LoadPortSetting();
             loadPort();
         }
@@ -29,12 +28,12 @@ namespace Truck_Balance
             if (btnNext.Text.Equals("التالي") && panel1.Visible == true)
             {
                 ShowPanel2();
-                savePortSetting();
+                //savePortSetting();
             }
             else if (btnNext.Text.Equals("التالي") && panel2.Visible == true)
             {
                 ShowPanel3();
-                savePortSetting();
+                //savePortSetting();
             }
             else if (btnNext.Text.Equals("انتهاء"))
             {
@@ -60,6 +59,7 @@ namespace Truck_Balance
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            sp = new SerialPortReader(this, lblWeightReading);
             sp.Connect();
             btnDisconnect.Enabled = true;
             btnConnect.Enabled = false;
@@ -116,11 +116,11 @@ namespace Truck_Balance
                 MessageBox.Show("من فضلك اختر الباود", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtDbConn.TextLength <= 0)
-            {
-                MessageBox.Show("من فضلك اختر ملف قاعدة البيانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (txtDbConn.TextLength <= 0)
+            //{
+            //    MessageBox.Show("من فضلك اختر ملف قاعدة البيانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
             Properties.Settings.Default.port = cbPort.Text.Trim();
             Properties.Settings.Default.baudrate = cbBaudrate.Text.Trim();
             Properties.Settings.Default.parity = cbParity.Text.Trim();

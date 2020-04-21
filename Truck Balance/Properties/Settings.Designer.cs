@@ -122,8 +122,8 @@ namespace Truck_Balance.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\Mohamed Saad Eldin\\Desktop\\Truck Balance\\Truck Balance\\data" +
-            "base.sdf\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\db.mdf;Integr" +
+            "ated Security=True;Connect Timeout=30")]
         public string dbConnectionString {
             get {
                 return ((string)(this["dbConnectionString"]));

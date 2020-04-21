@@ -36,9 +36,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = "insert into Users(username , password)VALUES(@username,@password)";
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@username", txtUser.Text);
@@ -63,10 +63,10 @@ namespace Truck_Balance.Forms
             {
                 string sql = "select id , username as Username ,password as Password from Users";
                 
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
                     conn.Open();
-                    using (SqlCeDataAdapter adapter = new SqlCeDataAdapter(sql, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conn))
                     {
                       
                         DataSet dt = new DataSet();
@@ -98,9 +98,9 @@ namespace Truck_Balance.Forms
             try
             {
                 string sql = string.Format("delete from users where id = {0}",Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value));
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
 
                         conn.Open();

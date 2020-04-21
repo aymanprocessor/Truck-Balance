@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SqlServerCe;
 using System.Drawing;
 using System.Linq;
@@ -32,9 +33,9 @@ namespace Truck_Balance.Forms
             {
                 string username = Properties.Settings.Default.username;
                 string sql = $"select password from Users where username = '{username}'";
-                using (SqlCeConnection conn = new SqlCeConnection(com.connstr()))
+                using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {
-                    using (SqlCeCommand cmd = new SqlCeCommand(sql, conn))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         var res = cmd.ExecuteScalar();
@@ -49,9 +50,9 @@ namespace Truck_Balance.Forms
                                     return;
                                 }
                                 string sql1 = $"update Users Set password = '{txtNewPassword.Text}' where username = '{username}'";
-                                using (SqlCeConnection conn1 = new SqlCeConnection(com.connstr()))
+                                using (SqlConnection conn1 = new SqlConnection(com.connstr()))
                                 {
-                                    using (SqlCeCommand cmd1 = new SqlCeCommand(sql1, conn1))
+                                    using (SqlCommand cmd1 = new SqlCommand(sql1, conn1))
                                     {
                                         conn1.Open();
                                         int result = cmd1.ExecuteNonQuery();
