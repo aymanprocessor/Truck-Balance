@@ -95,7 +95,7 @@ namespace Truck_Balance.Forms
                     connection.Open();
 
                     var result = command.ExecuteScalar();
-                    MessageBox.Show(result.ToString());
+
                     if (result.Equals(DBNull.Value))
                     {
                         label12.Text = "1";
