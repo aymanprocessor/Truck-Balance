@@ -118,22 +118,12 @@ namespace Truck_Balance
             Hide();
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.LightGreen;
-        }
-
         private void metroTile11_Click(object sender, EventArgs e)
         {
             first_weight first_weight = new first_weight();
             first_weight.Show();
            // first_weight.TopMost = true;
            this.Hide();
-        }
-
-        private void button2_MouseHover(object sender, EventArgs e)
-        {
-            button2.BackColor = Color.LightGreen;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
@@ -144,6 +134,17 @@ namespace Truck_Balance
         private void button2_MouseLeave(object sender, EventArgs e)
         {
             button2.BackColor = Color.Honeydew;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.LightGreen;
+
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.LightGreen;
         }
     }
 }

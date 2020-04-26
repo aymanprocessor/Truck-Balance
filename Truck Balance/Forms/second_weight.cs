@@ -494,5 +494,20 @@ namespace Truck_Balance.Forms
         {
             sp.Disconnect();
         }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNote_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

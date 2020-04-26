@@ -200,12 +200,13 @@
             this.lblTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTime.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTime.Location = new System.Drawing.Point(66, 117);
+            this.lblTime.Location = new System.Drawing.Point(66, 72);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTime.Size = new System.Drawing.Size(226, 26);
             this.lblTime.TabIndex = 0;
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblDate
             // 
@@ -213,7 +214,7 @@
             this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDate.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDate.Location = new System.Drawing.Point(66, 76);
+            this.lblDate.Location = new System.Drawing.Point(66, 113);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblDate.Size = new System.Drawing.Size(226, 26);
@@ -246,13 +247,14 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(298, 116);
+            this.label15.Location = new System.Drawing.Point(298, 72);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label15.Size = new System.Drawing.Size(60, 24);
             this.label15.TabIndex = 0;
             this.label15.Text = "الوقت :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label13
             // 
@@ -260,7 +262,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(298, 75);
+            this.label13.Location = new System.Drawing.Point(298, 113);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label13.Size = new System.Drawing.Size(67, 24);
@@ -591,6 +593,7 @@
             this.tbNote.Size = new System.Drawing.Size(318, 30);
             this.tbNote.TabIndex = 5;
             this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNote.TextChanged += new System.EventHandler(this.tbNote_TextChanged);
             // 
             // label6
             // 

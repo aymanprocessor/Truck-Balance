@@ -51,8 +51,8 @@ namespace Truck_Balance.Forms
             lblCarWeight1.Text = Wieght;
             tbCarNumber.Text = carNumber;
 
-            lblDate1.Text = DateTime.Now.ToString("hh:mm tt");
-            lblTime1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblDate1.Text =DateTime.Now.ToString("dd/MM/yyyy");
+            lblTime1.Text = DateTime.Now.ToString("hh:mm tt"); 
 
             cbCustomerName.Select();
 
@@ -207,6 +207,9 @@ namespace Truck_Balance.Forms
                 //lblDate2.Text = "";
                 lblTime1.Text = "";
                 //lblTime2.Text = "";
+
+                btnSave.Enabled = false;
+               
             }
         }
 
