@@ -133,7 +133,7 @@
             this.cbCustomerName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.cbCustomerName.Name = "cbCustomerName";
             this.cbCustomerName.Size = new System.Drawing.Size(292, 32);
-            this.cbCustomerName.TabIndex = 2;
+            this.cbCustomerName.TabIndex = 0;
             // 
             // cbDriverName
             // 
@@ -147,7 +147,7 @@
             this.cbDriverName.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.cbDriverName.Name = "cbDriverName";
             this.cbDriverName.Size = new System.Drawing.Size(292, 32);
-            this.cbDriverName.TabIndex = 2;
+            this.cbDriverName.TabIndex = 1;
             // 
             // cbCarType
             // 
@@ -161,7 +161,7 @@
             this.cbCarType.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.cbCarType.Name = "cbCarType";
             this.cbCarType.Size = new System.Drawing.Size(229, 32);
-            this.cbCarType.TabIndex = 2;
+            this.cbCarType.TabIndex = 3;
             // 
             // rbExport
             // 
@@ -219,7 +219,7 @@
             this.tbNote.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tbNote.Name = "tbNote";
             this.tbNote.Size = new System.Drawing.Size(191, 30);
-            this.tbNote.TabIndex = 5;
+            this.tbNote.TabIndex = 6;
             this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -246,7 +246,7 @@
             this.tbCarNumber.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tbCarNumber.Name = "tbCarNumber";
             this.tbCarNumber.Size = new System.Drawing.Size(191, 30);
-            this.tbCarNumber.TabIndex = 5;
+            this.tbCarNumber.TabIndex = 4;
             this.tbCarNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbCarNumber.TextChanged += new System.EventHandler(this.tbCarNumber_TextChanged);
             // 
@@ -548,7 +548,7 @@
             this.btnRecordWeight.Location = new System.Drawing.Point(457, 75);
             this.btnRecordWeight.Name = "btnRecordWeight";
             this.btnRecordWeight.Size = new System.Drawing.Size(187, 42);
-            this.btnRecordWeight.TabIndex = 1;
+            this.btnRecordWeight.TabIndex = 7;
             this.btnRecordWeight.Text = "تسجيل الوزنة الاولى";
             this.btnRecordWeight.UseVisualStyleBackColor = false;
             this.btnRecordWeight.Click += new System.EventHandler(this.btnRecordWeight1_Click);

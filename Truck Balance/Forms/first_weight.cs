@@ -51,8 +51,8 @@ namespace Truck_Balance.Forms
             lblCarWeight1.Text = Wieght;
             tbCarNumber.Text = carNumber;
 
-            lblDate1.Text =DateTime.Now.ToString("dd/MM/yyyy");
-            lblTime1.Text = DateTime.Now.ToString("hh:mm tt"); 
+            lblDate1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblTime1.Text = DateTime.Now.ToString("hh:mm tt");
 
             cbCustomerName.Select();
 
@@ -60,6 +60,8 @@ namespace Truck_Balance.Forms
             {
                 btnSave.Enabled = true;
             };
+
+            btnRecordWeight.Enabled = false;
         }
 
         public void first_weight_Load(object sender, EventArgs e)
@@ -169,7 +171,7 @@ namespace Truck_Balance.Forms
 
         private void btnNewWeight_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("هل تريد وزنة جديدة؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("هل تريد وزنة جديدة؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
                 string sql = "select max(id) from Wieghts";
@@ -209,7 +211,6 @@ namespace Truck_Balance.Forms
                 //lblTime2.Text = "";
 
                 btnSave.Enabled = false;
-               
             }
         }
 
@@ -394,7 +395,7 @@ namespace Truck_Balance.Forms
             }
             else
             {
-                MessageBox.Show("من فضلك تأكد من قراءة الميزان", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("من فضلك تأكد من قراءة الميزان", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             lblTime1.Text = DateTime.Now.ToString("hh:mm tt"); //("hh:mm tt");
@@ -680,7 +681,7 @@ namespace Truck_Balance.Forms
                             label12.Text = cmd.ExecuteScalar().ToString();
                             if (res > 0)
                             {
-                                MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                MessageBox.Show("تم الحفظ بالنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 btnNewWeight.Enabled = true;
                                 btnSecondWeight.Enabled = true;
                                 btnSave.Enabled = true;

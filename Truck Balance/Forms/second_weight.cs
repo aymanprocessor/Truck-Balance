@@ -80,7 +80,7 @@ namespace Truck_Balance.Forms
 
         private void second_weight_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
                 sp.Disconnect();
@@ -94,7 +94,7 @@ namespace Truck_Balance.Forms
             {
                 if (isSaved)
                 {
-                    DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult res = MessageBox.Show("هل تريد ان تخرج؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (res == DialogResult.Yes)
                     {
                         sp.Disconnect();
@@ -105,7 +105,7 @@ namespace Truck_Balance.Forms
                 }
                 else
                 {
-                    DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult res = MessageBox.Show("هل تريد ان تخرج بدون الحفظ؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (res == DialogResult.Yes)
                     {
                         sp.Disconnect();
@@ -326,7 +326,7 @@ namespace Truck_Balance.Forms
 
                         if (res > 0)
                         {
-                            MessageBox.Show("تم الحفظ بالنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            MessageBox.Show("تم الحفظ بالنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.None);
                             btnPrint.Enabled = true;
                             btnPreview.Enabled = true;
                             btnSave.Enabled = false;

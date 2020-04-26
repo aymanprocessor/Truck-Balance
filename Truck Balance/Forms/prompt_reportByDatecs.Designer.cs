@@ -54,11 +54,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(161, 109);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // label2
             // 
@@ -72,7 +72,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(161, 145);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 30);
@@ -84,7 +84,7 @@
             this.button1.Location = new System.Drawing.Point(321, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 42);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "عرض البيانات";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -95,7 +95,7 @@
             this.button2.Location = new System.Drawing.Point(161, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 42);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 4;
             this.button2.Text = "عودة";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -118,7 +118,7 @@
             this.panel2.Location = new System.Drawing.Point(147, 209);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 48);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 2;
             // 
             // radioButton2
             // 
