@@ -86,6 +86,7 @@ namespace Truck_Balance.Forms
         {
             com = new common();
             string[] government = {
+                "تصدير",
                     "الإسماعيلية",
                     "أسوان",
                     "أسيوط",
