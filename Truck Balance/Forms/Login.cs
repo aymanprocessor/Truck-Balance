@@ -63,6 +63,16 @@ namespace Truck_Balance.Forms
         {
             try
             {
+                if (cbUser.Text.Trim().Equals("admin") && txtPass.Text.Trim().Equals(Properties.Settings.Default.adminPass))
+                {
+                    Properties.Settings.Default.username = cbUser.Text.Trim();
+                    Properties.Settings.Default.Save();
+
+                    Main main = new Main();
+                    main.Show();
+                    this.Hide();
+                    return;
+                }
                 string sql = string.Format("select password from users where username =  N'{0}'", cbUser.Text.Trim());
                 using (SqlConnection conn = new SqlConnection(com.connstr()))
                 {

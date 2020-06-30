@@ -270,7 +270,6 @@ namespace Truck_Balance.Forms
                     using (SqlCommand cmd = new SqlCommand(sql2, conn))
                     {
                         conn.Open();
-
                         count = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }

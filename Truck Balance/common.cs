@@ -10,7 +10,9 @@ namespace Truck_Balance
     {
         public string connstr()
         {
-            return Properties.Settings.Default.dbConnectionString;
+            return $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Properties.Settings.Default.dbpath};Integrated Security=True;Connect Timeout=30";
+
+            //return Properties.Settings.Default.dbConnectionString;
         }
     }
 }

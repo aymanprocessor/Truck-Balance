@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(161, 109);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -71,7 +73,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(161, 145);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -106,7 +108,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(640, 13);
+            this.panel1.Size = new System.Drawing.Size(640, 28);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -153,6 +155,13 @@
             this.textBox1.Text = "عرض بيانات الاوزان خلال الفترة";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // prompt_reportByDatecs
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -171,7 +180,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "prompt_reportByDatecs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "prompt_reportByDatecs";
+            this.Text = " ";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -192,5 +201,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox textBox1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

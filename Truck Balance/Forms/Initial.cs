@@ -209,5 +209,9 @@ namespace Truck_Balance
                 cbPort.Items.Add(port);
             }
         }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+        }
     }
 }

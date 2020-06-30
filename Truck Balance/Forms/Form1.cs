@@ -25,9 +25,8 @@ namespace Truck_Balance
 
         private void metroTile12_Click(object sender, EventArgs e)
         {
-           
             second_weight second_Weight = new second_weight();
-           prevWieght prevwieght = new prevWieght(second_Weight);
+            prevWieght prevwieght = new prevWieght(second_Weight);
             prevwieght.Show();
             second_Weight.Show();
             this.Hide();
@@ -102,7 +101,7 @@ namespace Truck_Balance
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToString("hh:mm:ss tt  \t dd-MM-yyyy");
+            lblDate.Text = DateTime.Now.ToString("dd-MM-yyyy  \t  hh:mm:ss tt");
         }
 
         private void metroTile11_Click_1(object sender, EventArgs e)
@@ -122,8 +121,8 @@ namespace Truck_Balance
         {
             first_weight first_weight = new first_weight();
             first_weight.Show();
-           // first_weight.TopMost = true;
-           this.Hide();
+            // first_weight.TopMost = true;
+            this.Hide();
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
@@ -139,7 +138,6 @@ namespace Truck_Balance
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackColor = Color.LightGreen;
-
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)

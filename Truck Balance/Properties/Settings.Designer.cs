@@ -153,5 +153,17 @@ namespace Truck_Balance.Properties {
                 this["firstTime"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string adminPass {
+            get {
+                return ((string)(this["adminPass"]));
+            }
+            set {
+                this["adminPass"] = value;
+            }
+        }
     }
 }
