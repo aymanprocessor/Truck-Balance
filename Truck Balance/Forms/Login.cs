@@ -24,10 +24,32 @@ namespace Truck_Balance.Forms
         private void Login_Load(object sender, EventArgs e)
         {
             com = new common();
+            Trial trial = new Trial();
+            if (trial.isFirstTime())
+            {
+                trial.createTrial(10);
+            }
+
+            if (trial.getDiffTime() > 10)
+            {
+                MessageBox.Show("تم انتهاء مدة تجربة البرنامج", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                Application.ExitThread();
+            }
+            if (trial.getDiffTime() < 8)
+            {
+                MessageBox.Show("سوف ينتهي تجربة البرنامج بعد " + (10 - Math.Floor(trial.getDiffTime())) + " ايام", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            if (trial.getDiffTime() >= 8)
+            {
+                MessageBox.Show("سوف ينتهي تجربة البرنامج بعد " + (10 - Math.Floor(trial.getDiffTime())) + " يوم", "رسالة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             loadIntoComboFromDatabse(cbUser, "select username from users", "username");
         }
 
         private void label2_Click(object sender, EventArgs e)
+
         {
         }
 
