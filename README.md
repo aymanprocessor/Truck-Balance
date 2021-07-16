@@ -2,4 +2,4 @@
 
 # Screenshot
 
-<img src="screenshots/1.png" alt="drawing" width="200"/>
+<img src="screenshot/1.png" alt="drawing" width="200"/>
